@@ -11,17 +11,11 @@ use App\Http\Controllers\Auth\ResetController;
 
 use App\Http\Controllers\InstansiController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\Admin\Pusat\DashboardController;
+use App\Http\Controllers\Admin\Pusat\ManajemenOpdController;
+use App\Http\Controllers\Admin\Pusat\PendaftarController;
 
+// Routes User
 Route::get('/', [TamuController::class, 'index'])->name('homepage');
 
 Route::get('/login', [LoginController::class, 'index'])
@@ -46,5 +40,25 @@ Route::post('/reset-password', [ResetController::class, 'update'])
 
 Route::middleware('pemohon.or.dev')->group(function () {
     Route::get('/instansi-{slug}', [InstansiController::class, 'homeinstansi'])
-        ->name('user.pemohon.instansi.homeinstansi');
+    ->name('user.pemohon.instansi.homeinstansi');
+});
+
+// Routes Admin - Pusat
+Route::prefix('admin/pusat')->name('pusat.')->group(function (){
+    // Route Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])
+        ->name('dashboard');
+    // Route Pendaftar
+    Route::get('/pendaftar', [PendaftarController::class, 'index'])
+        ->name('pendaftar.index');
+    // Route Manajemen OPD
+    Route::get('/manajemen-opd', [ManajemenOpdController::class, 'index'])
+        ->name('manajemen-opd.index');
+    Route::get('/manajemen-opd/tambah', [ManajemenOpdController::class, 'create'])
+        ->name('manajemen-opd.create');
+    Route::post('/manajemen-opd/store', [ManajemenOpdController::class, 'store'])
+        ->name('manajemen-opd.store');
+    Route::get('/manajemen-opd/detail/{slug}', [ManajemenOpdController::class, 'detail'])
+        ->name('manajemen-opd.detail');
+
 });

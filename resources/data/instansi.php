@@ -3,7 +3,9 @@
 return [
     'dinas-kesehatan' => [
         'name' => 'Dinas Kesehatan',
+        'singkatan' => 'DINKES',
         'slug' => 'dinas-kesehatan',
+        'email' => 'dinkes@opd.go.id',
         'deskripsi' => 'DINKES Surabaya bertugas untuk mengelola 
                         Pusat Kesehatan Masyarakat (Puskesmas) yang ada di seluruh 
                         kecamatan, menjalankan program vaksinasi, meengendalikan 
@@ -20,16 +22,16 @@ return [
             'CV'
         ],
         'bidang' => [
-            ['name' => 'Sosial Media', 'icon' => 'Sosial-Media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
-            ['name' => 'Desain', 'icon' => 'Desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
-            ['name' => 'Administrasi', 'icon' => 'Administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
-            ['name' => 'Live Streaming', 'icon' => 'Live-Streaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
-            ['name' => 'Data Sains', 'icon' => 'Data-Sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
-            ['name' => 'Website', 'icon' => 'Website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
-            ['name' => 'Aplikasi', 'icon' => 'Aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
-            ['name' => 'Jaringan', 'icon' => 'Jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-            ['name' => 'BLC', 'icon' => 'BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
-        ],
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
         'gallery' => [
             'images/dinkes1.png',
             'images/dinkes2.png',
@@ -40,6 +42,8 @@ return [
     'dinas-pendidikan' => [
         'name' => 'Dinas Pendidikan',
         'slug' => 'dinas-pendidikan',
+        'email' => 'dispendik@opd.go.id',
+        'singkatan' => 'DISPENDIK',
         'deskripsi' => 'DISPENDIK Surabaya bertanggung jawab penuh untuk
                         mengelola sekolah negeri, membina tenaga pendidik
                         (Guru), menyusun kurikulum muatan lokal, mendistribusikan
@@ -56,16 +60,16 @@ return [
             'CV'
         ],
         'bidang' => [
-            ['name' => 'Sosial Media', 'icon' => 'Sosial-Media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
-            ['name' => 'Desain', 'icon' => 'Desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
-            ['name' => 'Administrasi', 'icon' => 'Administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
-            ['name' => 'Live Streaming', 'icon' => 'Live-Streaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
-            ['name' => 'Data Sains', 'icon' => 'Data-Sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
-            ['name' => 'Website', 'icon' => 'Website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
-            ['name' => 'Aplikasi', 'icon' => 'Aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
-            ['name' => 'Jaringan', 'icon' => 'Jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-            ['name' => 'BLC', 'icon' => 'BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
-        ],
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
         'gallery' => [
             'images/dinpen1.png',
             'images/dinpen2.png',
@@ -76,6 +80,8 @@ return [
     'kominfo' => [
         'name' => 'Dinas Komunikasi dan Informatika',
         'slug' => 'kominfo',
+        'email' => 'dinkominfo@opd.go.id',
+        'singkatan' => 'DINKOMINFO',
         'deskripsi' => 'DINKOMINFO Surabaya bertugas mengelola
                         jaringan internet pemerintah, mengembangkan aplikasi
                         layanan publik, mengelola situs web dan sosial media
@@ -92,16 +98,16 @@ return [
             'CV'
         ],
         'bidang' => [
-            ['name' => 'Sosial Media', 'icon' => 'Sosial-Media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
-            ['name' => 'Desain', 'icon' => 'Desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
-            ['name' => 'Administrasi', 'icon' => 'Administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
-            ['name' => 'Live Streaming', 'icon' => 'Live-Streaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
-            ['name' => 'Data Sains', 'icon' => 'Data-Sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
-            ['name' => 'Website', 'icon' => 'Website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
-            ['name' => 'Aplikasi', 'icon' => 'Aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
-            ['name' => 'Jaringan', 'icon' => 'Jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-            ['name' => 'BLC', 'icon' => 'BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
-        ],
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
         'gallery' => [
             'images/kominfo1.png',
             'images/kominfo2.png',
@@ -109,9 +115,11 @@ return [
         ]
     ],
 
-    'perumahan-permukiman' => [
-        'name' => 'Dinas Perumahan Rakyat dan Pemukiman Serta Pertahanan',
-        'slug' => 'perumahan-permukiman',
+    'perumahan' => [
+        'name' => 'Dinas Perumahan Rakyat dan Kawasan Pemukiman Serta Pertahanan',
+        'slug' => 'perumahan',
+        'email' => 'dprkpp@opd.go.id',
+        'singkatan' => 'DPRKPP',
         'deskripsi' => 'DPRKPP Surabaya  memiliki tugas mengurus segala
                         hal yang berhubungan dengan perumahan, mengelola Rumah Susun
                         Sewa (Rusunawa), menata kawasan kumuh, pemakaman umum, serta
@@ -127,16 +135,16 @@ return [
             'CV'
         ],
         'bidang' => [
-            ['name' => 'Sosial Media', 'icon' => 'Sosial-Media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
-            ['name' => 'Desain', 'icon' => 'Desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
-            ['name' => 'Administrasi', 'icon' => 'Administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
-            ['name' => 'Live Streaming', 'icon' => 'Live-Streaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
-            ['name' => 'Data Sains', 'icon' => 'Data-Sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
-            ['name' => 'Website', 'icon' => 'Website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
-            ['name' => 'Aplikasi', 'icon' => 'Aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
-            ['name' => 'Jaringan', 'icon' => 'Jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-            ['name' => 'BLC', 'icon' => 'BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
-        ],
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
         'gallery' => [
             'images/dinperumahan1.png',
             'images/dinperumahan2.png',
@@ -145,8 +153,10 @@ return [
     ],
 
     'ketahanan-pangan' => [
-        'name' => 'Dinas Ketahanan Pangan  dan Pertanian',
+        'name' => 'Dinas Ketahanan Pangan dan Pertanian',
         'slug' => 'ketahanan-pangan',
+        'email' => 'dkpp@opd.go.id',
+        'singkatan' => 'DKPP',
         'deskripsi' => 'DKPP Kota Surabaya bertanggung jawab 
                         atas pengawasan keamanan pangan di pasaran, membina 
                         kelompok tani dan peternak kota, serta menjalankan 
@@ -162,16 +172,16 @@ return [
             'CV'
         ],
         'bidang' => [
-            ['name' => 'Sosial Media', 'icon' => 'Sosial-Media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
-            ['name' => 'Desain', 'icon' => 'Desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
-            ['name' => 'Administrasi', 'icon' => 'Administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
-            ['name' => 'Live Streaming', 'icon' => 'Live-Streaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
-            ['name' => 'Data Sains', 'icon' => 'Data-Sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
-            ['name' => 'Website', 'icon' => 'Website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
-            ['name' => 'Aplikasi', 'icon' => 'Aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
-            ['name' => 'Jaringan', 'icon' => 'Jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-            ['name' => 'BLC', 'icon' => 'BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
-        ],
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
         'gallery' => [
             'images/dinpangan1.png',
             'images/dinpangan2.png',
@@ -182,6 +192,8 @@ return [
     'sumber-daya-air' => [
         'name' => 'Dinas Sumber Daya Air dan Bina Marga',
         'slug' => 'sumber-daya-air',
+        'email' => 'dsdabm@opd.go.id',
+        'singkatan' => 'DSDABM',
         'deskripsi' => 'DSDABM memiliki dua tugas utama, 
                         yakni yang pertama melakukan pengelolaan terhadap 
                         sistem drainase (saluran air), rumah pompa, dan 
@@ -199,20 +211,395 @@ return [
             'CV'
         ],
         'bidang' => [
-            ['name' => 'Sosial Media', 'icon' => 'Sosial-Media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
-            ['name' => 'Desain', 'icon' => 'Desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
-            ['name' => 'Administrasi', 'icon' => 'Administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
-            ['name' => 'Live Streaming', 'icon' => 'Live-Streaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
-            ['name' => 'Data Sains', 'icon' => 'Data-Sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
-            ['name' => 'Website', 'icon' => 'Website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
-            ['name' => 'Aplikasi', 'icon' => 'Aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
-            ['name' => 'Jaringan', 'icon' => 'Jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-            ['name' => 'BLC', 'icon' => 'BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
-        ],
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
         'gallery' => [
             'images/dinsumberair1.png',
             'images/dinsumberair2.png',
             'images/dinsumberair3.png'
+        ]
+    ],
+
+    'dinas-lingkungan_hidup' => [
+        'name' => 'Dinas Lingkungan Hidup',
+        'slug' => 'dinas-lingkungan_hidup',
+        'email' => 'dlh@opd.go.id',
+        'singkatan' => 'DLH',
+        'deskripsi' => '',
+        'lokasi' => '',
+        'telepon' => '',
+        'jam' => 'Senin - Jumat, 07.30 - 16.00',
+        'pendidikan' => ['SMK, Mahasiswa S1/D4 Sederajat'],
+        'persyaratan' => [
+            'KTP',
+            'Surat Pengantar',
+            'Proposal',
+            'CV'
+        ],
+        'bidang' => [
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
+        'gallery' => [
+            'images/dokumentasi-dinas/dlh1.png',
+            'images/dokumentasi-dinas/dlh2.png',
+            'images/dokumentasi-dinas/dlh3.png'
+        ]
+    ],
+
+
+    'dinas-kependudukan' => [
+        'name' => 'Dinas Kependudukan dan Pencatatan Sipil',
+        'slug' => 'dinas-kependudukan',
+        'email' => 'disdukcapil@opd.go.id',
+        'singkatan' => 'DISDUKCAPIL',
+        'deskripsi' => '',
+        'lokasi' => '',
+        'telepon' => '',
+        'jam' => 'Senin - Jumat, 07.30 - 16.00',
+        'pendidikan' => ['SMK, Mahasiswa S1/D4 Sederajat'],
+        'persyaratan' => [
+            'KTP',
+            'Surat Pengantar',
+            'Proposal',
+            'CV'
+        ],
+        'bidang' => [
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
+        'gallery' => [
+            'img/disdukcapil1.png',
+            'img/disdukcapil2.png',
+            'img/disdukcapil3.png'
+        ]
+    ],
+
+    'dinas-p3a' => [
+        'name' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
+        'slug' => 'dinas-p3a',
+        'email' => 'dp3appkb@opd.go.id',
+        'singkatan' => 'DP3A-PPKB',
+        'deskripsi' => '',
+        'lokasi' => '',
+        'telepon' => '',
+        'jam' => 'Senin - Jumat, 07.30 - 16.00',
+        'pendidikan' => ['SMK, Mahasiswa S1/D4 Sederajat'],
+        'persyaratan' => [
+            'KTP',
+            'Surat Pengantar',
+            'Proposal',
+            'CV'
+        ],
+        'bidang' => [
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
+        'gallery' => [
+            'img/dp3a-1.png',
+            'img/dp3a-2.png',
+            'img/dp3a-3.png'
+        ]
+    ],
+
+    'dinas-perhubungan' => [
+        'name' => 'Dinas Perhubungan',
+        'slug' => 'dinas-perhubungan',
+        'email' => 'dishub@opd.go.id',
+        'singkatan' => 'DISHUB',
+        'deskripsi' => '',
+        'lokasi' => '',
+        'telepon' => '',
+        'jam' => 'Senin - Jumat, 07.30 - 16.00',
+        'pendidikan' => ['SMK, Mahasiswa S1/D4 Sederajat'],
+        'persyaratan' => [
+            'KTP',
+            'Surat Pengantar',
+            'Proposal',
+            'CV'
+        ],
+        'bidang' => [
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
+        'gallery' => [
+            'img/dishub1.png',
+            'img/dishub2.png',
+            'img/dishub3.png'
+        ]
+    ],
+
+    'dinas-koperasi' => [
+        'name' => 'Dinas Koperasi Usaha Kecil dan Menengah dan Perdagangan',
+        'slug' => 'dinas-koperasi',
+        'email' => 'diskopdag@opd.go.id',
+        'singkatan' => 'DISKOPDAG',
+        'deskripsi' => '',
+        'lokasi' => '',
+        'telepon' => '',
+        'jam' => 'Senin - Jumat, 07.30 - 16.00',
+        'pendidikan' => ['SMK, Mahasiswa S1/D4 Sederajat'],
+        'persyaratan' => [
+            'KTP',
+            'Surat Pengantar',
+            'Proposal',
+            'CV'
+        ],
+        'bidang' => [
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
+        'gallery' => [
+            'img/diskopdag1.png',
+            'img/diskopdag2.png',
+            'img/diskopdag3.png'
+        ]
+    ],
+
+    'dinas-kebudayaan' => [
+        'name' => 'Dinas Kebudayaan, Kepemudaan, dan Olahraga, serta Pariwisata',
+        'slug' => 'dinas-kebudayaan',
+        'email' => 'dkkorp@opd.go.id',
+        'singkatan' => 'DKKORP',
+        'deskripsi' => '',
+        'lokasi' => '',
+        'telepon' => '',
+        'jam' => 'Senin - Jumat, 07.30 - 16.00',
+        'pendidikan' => ['SMK, Mahasiswa S1/D4 Sederajat'],
+        'persyaratan' => [
+            'KTP',
+            'Surat Pengantar',
+            'Proposal',
+            'CV'
+        ],
+        'bidang' => [
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
+        'gallery' => [
+            'img/dkkorp1.png',
+            'img/dkkorp2.png',
+            'img/dkkorp3.png'
+        ]
+    ],
+
+    'dinas-perpustakaan' => [
+        'name' => 'Dinas Perpustakaan dan Kearsipan',
+        'slug' => 'dinas-perpustakaan',
+        'email' => 'dispusip@opd.go.id',
+        'singkatan' => 'DISPUSIP',
+        'deskripsi' => '',
+        'lokasi' => '',
+        'telepon' => '',
+        'jam' => 'Senin - Jumat, 07.30 - 16.00',
+        'pendidikan' => ['SMK, Mahasiswa S1/D4 Sederajat'],
+        'persyaratan' => [
+            'KTP',
+            'Surat Pengantar',
+            'Proposal',
+            'CV'
+        ],
+        'bidang' => [
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
+        'gallery' => [
+            'img/dispusip1.png',
+            'img/dispusip2.png',
+            'img/dispusip3.png'
+        ]
+    ],
+
+    'dinas-pmptsp' => [
+        'name' => 'Dinas Penanaman Modal dan Pelayanan Satu Pintu',
+        'slug' => 'dinas-pmptsp',
+        'email' => 'dpmptsp@opd.go.id',
+        'singkatan' => 'DPMPTSP',
+        'deskripsi' => '',
+        'lokasi' => '',
+        'telepon' => '',
+        'jam' => 'Senin - Jumat, 07.30 - 16.00',
+        'pendidikan' => ['SMK, Mahasiswa S1/D4 Sederajat'],
+        'persyaratan' => [
+            'KTP',
+            'Surat Pengantar',
+            'Proposal',
+            'CV'
+        ],
+        'bidang' => [
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
+        'gallery' => [
+            'img/dpmptsp1.png',
+            'img/dpmptsp2.png',
+            'img/dpmptsp3.png'
+        ]
+    ],
+
+    'dinas-perindustrian' => [
+        'name' => 'Dinas Perindustrian dan Tenaga Kerja',
+        'slug' => 'dinas-perindustrian',
+        'email' => 'disperinaker@opd.go.id',
+        'singkatan' => 'DISPERINAKER',
+        'deskripsi' => '',
+        'lokasi' => '',
+        'telepon' => '',
+        'jam' => 'Senin - Jumat, 07.30 - 16.00',
+        'pendidikan' => ['SMK, Mahasiswa S1/D4 Sederajat'],
+        'persyaratan' => [
+            'KTP',
+            'Surat Pengantar',
+            'Proposal',
+            'CV'
+        ],
+        'bidang' => [
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
+        'gallery' => [
+            'img/disperinaker1.png',
+            'img/disperinaker2.png',
+            'img/disperinaker3.png'
+        ]
+    ],
+
+    'dinas-pemadam_kebakaran' => [
+        'name' => 'Dinas Pemadam Kebakaran dan Penyelamatan',
+        'slug' => 'dinas-pemadam_kebakaran',
+        'email' => 'pmk112@opd.go.id',
+        'singkatan' => 'DPMK',
+        'deskripsi' => '',
+        'lokasi' => '',
+        'telepon' => '',
+        'jam' => 'Senin - Jumat, 07.30 - 16.00',
+        'pendidikan' => ['SMK, Mahasiswa S1/D4 Sederajat'],
+        'persyaratan' => [
+            'KTP',
+            'Surat Pengantar',
+            'Proposal',
+            'CV'
+        ],
+        'bidang' => [
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
+        'gallery' => [
+            'img/dpmk1.png',
+            'img/dpmk2.png',
+            'img/dpmk3.png'
+        ]
+    ],
+
+    'dinas-sosial' => [
+        'name' => 'Dinas Sosial',
+        'slug' => 'dinas-sosial',
+        'email' => 'disos@opd.go.id',
+        'singkatan' => 'DINSOS',
+        'deskripsi' => '',
+        'lokasi' => '',
+        'telepon' => '',
+        'jam' => 'Senin - Jumat, 07.30 - 16.00',
+        'pendidikan' => ['SMK, Mahasiswa S1/D4 Sederajat'],
+        'persyaratan' => [
+            'KTP',
+            'Surat Pengantar',
+            'Proposal',
+            'CV'
+        ],
+        'bidang' => [
+                        ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Administrasi', 'icon' => 'BDG-administrasi.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFFFFF'],
+                        ['name' => 'Live Streaming', 'icon' => 'BDG-livestreaming.svg', 'gradient_start' => '#0F2027', 'gradient_end' => '#4296BA'],
+                        ['name' => 'Data Sains', 'icon' => 'BDG-data_sains.svg', 'gradient_start' => '#1CBB7F', 'gradient_end' => '#FFC371'],
+                        ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
+                        ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                    ],
+        'gallery' => [
+            'img/dinsos1.png',
+            'img/dinsos2.png',
+            'img/dinsos3.png'
         ]
     ],
 ];
