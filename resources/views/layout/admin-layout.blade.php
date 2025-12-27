@@ -10,23 +10,6 @@
     {{-- Load Assets --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    {{-- Font Poppins --}}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    {{-- Tailwind CDN --}}
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Poppins', 'sans-serif'] }
-                }
-            }
-        }
-    </script>
-
     <style>
         body { font-family: 'Poppins', sans-serif !important; }
         /* Page Transition Animation */
@@ -41,12 +24,12 @@
     
     <div class="flex h-screen overflow-hidden">
 
-        {{-- 1. SIDEBAR DINAMIS (Logic Request::is) --}}
+        {{-- 1. SIDEBAR --}}
 
-        @if(Request::is('pembimbing*'))
+        @if(Request::is('admin/pembimbing*'))
             @include('admin.pembimbing.components.sidebar')
 
-        @elseif(Request::is('opd*'))
+        @elseif(Request::is('admin/opd*'))
             @include('admin.opd.components.sidebar')
 
         @elseif(Request::is('admin/pusat*'))
@@ -55,14 +38,14 @@
         @endif
 
 
-        <div class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden ml-64">
+        <div id="mainContent" class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden ml-64">
 
-            {{-- 2. NAVBAR DINAMIS --}}
+            {{-- 2. NAVBAR --}}
             
-            @if(Request::is('pembimbing*'))
+            @if(Request::is('admin/pembimbing*'))
                 @include('admin.pembimbing.components.navbar')
 
-            @elseif(Request::is('opd*'))
+            @elseif(Request::is('admin/opd*'))
                 @include('admin.opd.components.navbar')
 
             @elseif(Request::is('admin/pusat*'))
@@ -78,6 +61,9 @@
         </div>
 
     </div>
+
+    @include('admin.pembimbing.components.modal-preview')
+    @include('admin.pembimbing.components.modal-approval')
 
 </body>
 </html>

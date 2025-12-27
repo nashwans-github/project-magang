@@ -1,4 +1,4 @@
-<div class="bg-[#262626] p-6 border-[3px] border-[#011640] shadow-lg w-full relative overflow-hidden mb-6 rounded-sm">
+<   div class="bg-[#262626] p-6 border-[3px] border-[#011640] shadow-lg w-full relative overflow-hidden mb-6 rounded-sm">
 
     <div class="absolute inset-0 bg-gradient-to-br from-[#262626] via-[#2a2a2a] to-[#202020] opacity-50 pointer-events-none"></div>
 
