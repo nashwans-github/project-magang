@@ -20,7 +20,7 @@
             <div class="group">
                 {{-- Baris Nama Dinas & Angka --}}
                 <div class="flex justify-between items-end mb-2">
-                    <a href="{{ route('pusat.manajemen-opd.detail', $dinas['slug']) }}" 
+                    <a href="{{ route('pusat.manajemen-opd.detail', $dinas['slug'] ?? '#') }}" 
                         class="text-gray-200 text-sm font-medium tracking-wide group-hover:text-blue-400 transition-colors z-20 relative">
                         {{ $dinas['name'] }}
                     </a>

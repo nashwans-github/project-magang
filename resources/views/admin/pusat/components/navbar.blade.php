@@ -1,8 +1,7 @@
-<header class="bg-[#011640] h-20 min-h-[80px] max-h-[80px] border-b border-gray-800 flex items-center justify-between px-8 shadow-sm z-20 sticky top-0">
+<header class="bg-[#011640] h-24 border-b border-gray-800 flex items-center justify-between px-8 shadow-sm z-20 sticky top-0">
                 
     <div class="flex items-center">
-        <h1 class="text-xl font-bold text-white tracking-wide">
-            @yield('header-title', 'Dashboard') 
+        <h1 class="text-xl font-bold text-white tracking-wide"> 
         </h1>
     </div>
 

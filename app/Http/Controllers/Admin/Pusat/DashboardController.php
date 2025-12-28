@@ -9,112 +9,81 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // ==========================================
         // 1. LOAD SEMUA DATA DUMMY
-        // ==========================================
-        $dataInstansi = include resource_path('data/instansi.php');
-        $dataPeserta  = include resource_path('data/peserta.php'); // Data Peserta Aktif
-        $dataPemohon  = include resource_path('data/pemohon.php'); // Data Pemohon (Baru)
-        $dataPendaftar = include resource_path('data/pendaftar.php'); // Data Pendaftar (Akun User)
+        $dataInstansi  = include resource_path('data/instansi.php');
+        $dataPendaftar = include resource_path('data/pendaftar.php'); 
+        $dataPemohon   = include resource_path('data/pemohon.php');   
+        $dataPeserta   = include resource_path('data/peserta.php');   
 
-        // ==========================================
         // 2. HITUNG WIDGET (STATS KOTAK ATAS)
-        // ==========================================
-        
-        // A. Jumlah OPD
-        $totalOpd = count($dataInstansi);
-
-        // B. Jumlah Pendaftar (User Akun)
+        $totalOpd       = count($dataInstansi);
         $totalPendaftar = count($dataPendaftar); 
-        
-        // C. Jumlah Peserta Aktif
-        $totalPeserta = count($dataPeserta); 
+        $totalPemohon   = count($dataPemohon); 
+        $totalPeserta   = count($dataPeserta); 
 
-        // D. Jumlah Pemohon (Total Proposal)
-        $totalPemohon = count($dataPemohon); 
-
-
-        // ==========================================================
         // 3. LOGIC GRAFIK VERTIKAL (PEMOHON PER DINAS)
-        // ==========================================================
         $data_pendaftar = []; 
-        $highestPemohon = 0;
+        $highestValue = 0; 
 
-        foreach ($dataInstansi as $slug => $opd) {
-            // Hitung pemohon per dinas
-            $jumPemohon = count(array_filter($dataPemohon, function ($p) use ($slug) {
-                return isset($p['dinas_tujuan']) && $p['dinas_tujuan'] === $slug;
+        foreach ($dataInstansi as $opd) {
+            // Filter berdasarkan id_dinas (sesuai data dummy pemohon)
+            $jumPemohon = count(array_filter($dataPemohon, function ($p) use ($opd) {
+                return isset($p['id_dinas']) && $p['id_dinas'] === $opd['id'];
             }));
             
             $data_pendaftar[] = [
-                'singkatan' => $opd['singkatan'] ?? $opd['name'], 
+                'singkatan' => $opd['singkatan'] ?? ($opd['name'] ?? 'Tanpa Nama'), 
                 'jumlah' => $jumPemohon
             ];
 
-            if ($jumPemohon > $highestPemohon) {
-                $highestPemohon = $jumPemohon;
+            if ($jumPemohon > $highestValue) {
+                $highestValue = $jumPemohon;
             }
         }
 
-        // Logic Skala & Grid Dinamis (Sesuai request)
-        $max_scale = 100;
-        $step_size = 10;
+       // 4. DATA GRAFIK HORIZONTAL (PESERTA PER DINAS)
+$chartData = [];
+foreach ($dataInstansi as $opd) {
+    $jumPeserta = count(array_filter($dataPeserta, function ($p) use ($opd) {
+        // PERBAIKAN: Cek id_dinas, jika tidak ada cek instansi_slug
+        if (isset($p['id_dinas'])) {
+            return $p['id_dinas'] === $opd['id'];
+        }
+        if (isset($p['instansi_slug'])) {
+            return $p['instansi_slug'] === $opd['slug'];
+        }
+        return false;
+    }));
 
-        if ($highestPemohon <= 10) {
-            $max_scale = 10;
-            $step_size = 2; 
-        } elseif ($highestPemohon <= 25) {
-            $max_scale = 25;
-            $step_size = 5; 
-        } elseif ($highestPemohon <= 50) {
-            $max_scale = 50;
-            $step_size = 10; 
+    $chartData[] = [
+        'name'  => $opd['name'],
+        'slug'  => $opd['slug'] ?? '',
+        'count' => $jumPeserta 
+    ];
+
+    // Update highest value untuk skala
+    if ($jumPeserta > $highestValue) {
+        $highestValue = $jumPeserta;
+    }
+}
+        // 5. LOGIC SKALA DINAMIS
+        if ($highestValue <= 10) {
+            $maxScale = 10;
+            $stepSize = 2; 
+        } elseif ($highestValue <= 25) {
+            $maxScale = 25;
+            $stepSize = 5; 
+        } elseif ($highestValue <= 50) {
+            $maxScale = 50;
+            $stepSize = 10; 
+        } else {
+            $maxScale = (ceil($highestValue / 20) * 20); // Skala dinamis kelipatan 20
+            $stepSize = $maxScale / 5;
         }
 
-        
-        // ==========================================================
-        // 4. LOGIC GRAFIK HORIZONTAL (PESERTA AKTIF PER DINAS)
-        // ==========================================================
-        $chartData = [];
-        $highestPeserta = 0;
-
-        foreach ($dataInstansi as $slug => $opd) {
-            // Hitung peserta aktif per dinas
-            $jumPeserta = count(array_filter($dataPeserta, function ($p) use ($slug) {
-                return isset($p['instansi_slug']) && $p['instansi_slug'] === $slug;
-            }));
-
-            $chartData[] = [
-                'name' => $opd['name'],
-                'slug' => $slug,
-                'count' => $jumPeserta 
-            ];
-
-            if ($jumPeserta > $highestPeserta) {
-                $highestPeserta = $jumPeserta;
-            }
-        }
-        
-        // Skala grafik horizontal (Bisa dibuat dinamis juga kalau mau)
-        // Untuk sekarang kita set fix 50 atau mengikuti tertinggi
-        $maxScale = 100;
-
-
-        // ==========================================
-        // 5. KIRIM SEMUA KE VIEW
-        // ==========================================
         return view('admin.pusat.dashboard.index', compact(
-            // Data Widget
-            'totalOpd', 
-            'totalPendaftar', 
-            'totalPeserta', 
-            'totalPemohon', 
-            
-            // Data Grafik Vertikal (Pemohon)
-            'data_pendaftar', 'max_scale', 'step_size', // <--- Koma (,) di sini PENTING
-
-            // Data Grafik Horizontal (Peserta)
-            'chartData', 'maxScale'
+            'totalOpd', 'totalPendaftar', 'totalPemohon', 'totalPeserta', 
+            'data_pendaftar', 'maxScale', 'stepSize', 'chartData'
         ));
     }
 }

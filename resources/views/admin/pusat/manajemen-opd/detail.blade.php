@@ -120,8 +120,8 @@
                 <div>
                     <p class="text-white/60 text-base font-semibold mb-1">Pendidikan</p>
                     <p class="text-lg font-medium">
-                        {{ is_array($opd['persyaratan'] ?? []) ? implode(', ', $opd['persyaratan']) : ($opd['persyaratan'] ?? '-') }}
-                    </p>
+                       {{ is_array($opd['pendidikan'] ?? []) ? implode(', ', $opd['pendidikan']) : ($opd['pendidikan'] ?? '-') }}
+                   </p>
                 </div>
             </div>
 

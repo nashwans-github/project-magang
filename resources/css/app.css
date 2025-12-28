@@ -7,94 +7,93 @@
 /* Visual components & reusable abstractions         */
 /* ================================================= */
 @layer components {
+    /* ------------------------------------------------- */
+    /* MENU ITEM (Sidebar / Navigation Item)             */
+    /* ------------------------------------------------- */
+    .menu-item {
+        @apply text-right cursor-pointer font-extrabold text-[18px] py-[25px] pr-[60px] relative;
+    }
 
-  /* ------------------------------------------------- */
-  /* MENU ITEM (Sidebar / Navigation Item)             */
-  /* ------------------------------------------------- */
-  .menu-item {
-    @apply text-right cursor-pointer font-extrabold text-[18px] py-[25px] pr-[60px] relative;
-  }
+    .menu-item.active {
+        background-image: url("/images/kotak.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 95%;
+        height: 70px;
+        @apply flex justify-end items-center;
+    }
 
-  .menu-item.active {
-    background-image: url('/images/kotak.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 95%;
-    height: 70px;
-    @apply flex justify-end items-center;
-  }
+    /* ------------------------------------------------- */
+    /* PAGE / BODY BACKGROUND                            */
+    /* ------------------------------------------------- */
+    .body-bg-login {
+        background-image: url("../../public/images/bg_auth.png");
+    }
 
-  /* ------------------------------------------------- */
-  /* PAGE / BODY BACKGROUND                            */
-  /* ------------------------------------------------- */
-  .body-bg-login {
-    background-image: url('../../public/images/bg_auth.png');
-  }
+    /* ------------------------------------------------- */
+    /* NAVBAR – INTERACTIVE STATES (JS-driven)           */
+    /* ------------------------------------------------- */
+    a.scroll-link.active-nav {
+        color: white;
+    }
 
-  /* ------------------------------------------------- */
-  /* NAVBAR – INTERACTIVE STATES (JS-driven)           */
-  /* ------------------------------------------------- */
-  a.scroll-link.active-nav {
-    color: white;
-  }
+    /* ------------------------------------------------- */
+    /* NAVBAR – SHRINK STATE (visual only)               */
+    /* Triggered by scroll JS                            */
+    /* ------------------------------------------------- */
+    .navbar-shrink {
+        transition: all 0.3s ease;
+    }
 
-  /* ------------------------------------------------- */
-  /* NAVBAR – SHRINK STATE (visual only)               */
-  /* Triggered by scroll JS                            */
-  /* ------------------------------------------------- */
-  .navbar-shrink {
-    transition: all 0.3s ease;
-  }
+    .navbar-shrink img {
+        width: 2rem;
+    }
 
-  .navbar-shrink img {
-    width: 2rem;
-  }
+    .navbar-shrink span {
+        font-size: 13px;
+    }
 
-  .navbar-shrink span {
-    font-size: 13px;
-  }
+    .navbar-shrink a.scroll-link {
+        font-size: 14px;
+    }
 
-  .navbar-shrink a.scroll-link {
-    font-size: 14px;
-  }
+    .navbar-shrink .nav-login-btn {
+        padding: 0.4rem 1.25rem;
+        font-size: 13px;
+        border-radius: 6px;
+    }
 
-  .navbar-shrink .nav-login-btn {
-    padding: 0.4rem 1.25rem;
-    font-size: 13px;
-    border-radius: 6px;
-  }
+    /* ------------------------------------------------- */
+    /* NAVBAR – MENU SPACING                             */
+    /* ------------------------------------------------- */
+    .navbar-menu {
+        gap: 2.5rem;
+        transition: gap 0.3s ease;
+    }
 
-  /* ------------------------------------------------- */
-  /* NAVBAR – MENU SPACING                             */
-  /* ------------------------------------------------- */
-  .navbar-menu {
-    gap: 2.5rem;
-    transition: gap 0.3s ease;
-  }
+    .navbar-shrink .navbar-menu {
+        gap: 1.25rem;
+    }
 
-  .navbar-shrink .navbar-menu {
-    gap: 1.25rem;
-  }
+    /* ------------------------------------------------- */
+    /* GLOBAL SCROLL BEHAVIOR                            */
+    /* Prevent section being hidden by fixed navbar     */
+    /* ------------------------------------------------- */
+    #hero,
+    #instansi,
+    #langkah,
+    #faq {
+        scroll-margin-top: 90px;
+    }
 
-  /* ------------------------------------------------- */
-  /* GLOBAL SCROLL BEHAVIOR                            */
-  /* Prevent section being hidden by fixed navbar     */
-  /* ------------------------------------------------- */
-  #hero,
-  #instansi,
-  #langkah,
-  #faq {
-    scroll-margin-top: 90px;
-  }
-
-  /* ------------------------------------------------- */
-  /* NAVBAR BACKDROP OVERRIDE                          */
-  /* Explicitly disable blur in some conditions        */
-  /* ------------------------------------------------- */
-  #navbar {
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-  }
+    /* ------------------------------------------------- */
+    /* NAVBAR BACKDROP OVERRIDE                          */
+    /* Explicitly disable blur in some conditions        */
+    /* ------------------------------------------------- */
+    #navbar {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
 }
 
 /* ================================================= */
@@ -102,12 +101,62 @@
 /* Small, atomic helpers                             */
 /* ================================================= */
 @layer utilities {
+    .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
 
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+    /* Custom Scrollbar untuk Aktivitas */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #1a1a1e;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #0554f2;
+        border-radius: 10px;
+    }
 
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .page-animate {
+        animation: fadeInUp 0.5s ease-out forwards;
+    }
+}
+
+/* Custom Date Picker Styling || MENU BERITA INSTANSI*/
+.custom-date-input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.custom-date-input {
+    position: relative;
+    z-index: 10;
+}
+
+/* Menghilangkan ikon mata bawaan Microsoft Edge / IE */
+/* Hilangkan ikon mata bawaan Edge/IE */
+#inputPassword::-ms-reveal,
+#inputPassword::-ms-clear {
+    display: none;
+}
+
+/* Pastikan container password tetap rapi */
+.relative input[type="password"] {
+    padding-right: 3rem; /* Memberi ruang untuk ikon mata kustom Anda */
 }

@@ -13,9 +13,9 @@
                     <span class="text-white text-lg font-semibold -rotate-90 whitespace-nowrap tracking-wider block">Jumlah Pemohon</span>
                 </div>
 
-                {{-- BAGIAN 1: LABEL ANGKA SUMBU Y (KIRI - DINAMIS) --}}
-                <div class="flex flex-col justify-between h-full text-right pr-2 text-gray-400 text-sm font-medium" style="padding-bottom: 0;">
-                    @for ($i = $max_scale; $i >= 0; $i -= $step_size)
+                {{-- BAGIAN 1: LABEL ANGKA SUMBU Y --}}
+                <div class="flex flex-col justify-between h-full text-right pr-2 text-gray-400 text-sm font-medium">
+                    @for ($i = $maxScale; $i >= 0; $i -= $stepSize)
                         <span class="transform translate-y-1/2">{{ $i }}</span>
                     @endfor
                 </div>
@@ -25,7 +25,7 @@
 
                     {{-- BAGIAN 2: GARIS GRID --}}
                     <div class="absolute inset-0 flex flex-col justify-between pointer-events-none h-full border-l border-b border-gray-600">
-                        @for ($i = $max_scale; $i >= 0; $i -= $step_size)
+                        @for ($i = $maxScale; $i >= 0; $i -= $stepSize)
                             <div class="w-full border-t border-gray-700/50 {{ $i == 0 ? 'border-transparent' : '' }} h-0 relative"></div>
                         @endfor
                     </div>
@@ -35,10 +35,7 @@
                         
                         @foreach($data_pendaftar as $dinas)
                             @php
-                                $percent_height = 0;
-                                if($max_scale > 0) {
-                                    $percent_height = ($dinas['jumlah'] / $max_scale) * 100;
-                                }
+                                $percent_height = ($maxScale > 0) ? ($dinas['jumlah'] / $maxScale) * 100 : 0;
                             @endphp
 
                             <div class="relative w-full max-w-[40px] bg-[#60A5FA] hover:bg-[#3B82F6] transition-all rounded-t-sm group cursor-pointer" 
@@ -46,12 +43,12 @@
                                 
                                 {{-- Tooltip --}}
                                 <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black/80 px-2 py-1 rounded text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity z-20 whitespace-nowrap">
-                                    {{ $dinas['jumlah'] }}
+                                    {{ $dinas['jumlah'] }} Pemohon
                                 </span>
 
-                                {{-- Label Nama Dinas --}}
+                                {{-- Label Nama Dinas (Singkatan) --}}
                                 <div class="absolute bottom-0 left-1/2 w-0 h-0">
-                                    <div class="w-32 -left-[136px] absolute top-0 origin-right -rotate-90 text-right transform translate-y-1/2 translate-x-2">
+                                    <div class="w-32 -left-[136px] absolute top-2 origin-right -rotate-90 text-right transform translate-y-1/2 translate-x-2">
                                         <span class="text-white text-sm font-normal block truncate hover:text-blue-400 transition-colors">
                                             {{ $dinas['singkatan'] }}
                                         </span>
