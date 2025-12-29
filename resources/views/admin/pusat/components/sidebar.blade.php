@@ -21,7 +21,7 @@
         <a href="{{ url('/admin/pusat/dashboard') }}" 
            class="flex items-center px-4 py-3 rounded-xl transition-all duration-300 group {{ $isActive ? $activeClass : $inactiveClass }}">
             
-            <img src="{{ asset('images/icons_sidebar/pembimbing-dashboard_' . ($isActive ? 'aktif' : 'nonaktif') . '.svg') }}" 
+            <img src="{{ asset('vector/icons_sidebar/pembimbing-dashboard_' . ($isActive ? 'aktif' : 'nonaktif') . '.svg') }}" 
                  alt="Dashboard" 
                  class="w-6 h-6 mr-3 transition-transform duration-300 group-hover:scale-110">
             
@@ -41,7 +41,7 @@
         <a href="{{ url('/admin/pusat/pendaftar') }}" 
            class="flex items-center px-4 py-3 rounded-xl transition-all duration-300 group {{ $isActive ? $activeClass : $inactiveClass }}">
             
-            <img src="{{ asset('images/icons_sidebar/PUSAT-pendaftar_' . ($isActive ? 'aktif' : 'nonaktif') . '.svg') }}" 
+            <img src="{{ asset('vector/icons_sidebar/PUSAT-pendaftar_' . ($isActive ? 'aktif' : 'nonaktif') . '.svg') }}" 
                  alt="Pendaftar" 
                  class="w-6 h-6 mr-3 transition-transform duration-300 group-hover:scale-110">
                  
@@ -52,7 +52,7 @@
         <a href="{{ url('/admin/pusat/manajemen-opd') }}" 
            class="flex items-center px-4 py-3 rounded-xl transition-all duration-300 group {{ $isActive ? $activeClass : $inactiveClass }}">
             
-            <img src="{{ asset('images/icons_sidebar/PUSAT-manajemenOPD_' . ($isActive ? 'aktif' : 'nonaktif') . '.svg') }}" 
+            <img src="{{ asset('vector/icons_sidebar/PUSAT-manajemenOPD_' . ($isActive ? 'aktif' : 'nonaktif') . '.svg') }}" 
                  alt="Manajemen OPD" 
                  class="w-6 h-6 mr-3 transition-transform duration-300 group-hover:scale-110">
                  

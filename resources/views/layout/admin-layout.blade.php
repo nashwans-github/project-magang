@@ -25,7 +25,7 @@
     <div class="flex h-screen overflow-hidden">
 
         {{-- SIDEBAR DINAMIS --}}
-        @if(Request::is('pembimbing*'))
+        @if(Request::is('admin/pembimbing*'))
             @include('admin.pembimbing.components.sidebar')
         @elseif(Request::is('admin/opd*'))
             @include('admin.opd.components.sidebar')
@@ -36,7 +36,7 @@
         <div class="relative flex flex-1 flex-col overflow-y-auto ml-64 bg-black">
             <nav class="sticky top-0 z-20">
             {{-- NAVBAR DINAMIS --}}
-            @if(Request::is('pembimbing*'))
+            @if(Request::is('admin/pembimbing*'))
                 @include('admin.pembimbing.components.navbar')
             @elseif(Request::is('admin/opd*'))
                 @include('admin.opd.components.navbar')
@@ -52,7 +52,9 @@
         </div>
     </div>
 
-    {{-- 4. Load JS di akhir --}}
-@vite(['resources/js/news-handler.js'])
+    @vite(['resources/js/news-handler.js'])
+    @include('admin.pembimbing.components.modal-preview')
+    @include('admin.pembimbing.components.modal-approval')
+
 </body>
 </html>

@@ -22,6 +22,12 @@ use App\Http\Controllers\Admin\Opd\PesertaController;
 use App\Http\Controllers\Admin\Opd\SuratMagangController;
 use App\Http\Controllers\Admin\Opd\BeritaInstansiController;
 
+use App\Http\Controllers\Admin\Pembimbing\DashboardController as PembimbingDashboard;
+use App\Http\Controllers\Admin\Pembimbing\DaftarPesertaController;
+use App\Http\Controllers\Admin\Pembimbing\PresensiController;
+use App\Http\Controllers\Admin\Pembimbing\ProgresController;
+use App\Http\Controllers\Admin\Pembimbing\PenilaianController;
+
 // Routes User
 Route::get('/', [TamuController::class, 'index'])->name('homepage');
 
@@ -67,12 +73,9 @@ Route::prefix('admin/pusat')->name('pusat.')->group(function (){
         ->name('manajemen-opd.store');
     Route::get('/manajemen-opd/detail/{slug}', [ManajemenOpdController::class, 'detail'])
         ->name('manajemen-opd.detail');
-
 });
 
-// =================================================================
 // 2. ROUTES ADMIN - OPD (Penyelarasan Baru)
-// =================================================================
 Route::prefix('admin/opd')->name('opd.')->group(function () {
 
     // Dashboard
@@ -104,5 +107,35 @@ Route::prefix('admin/opd')->name('opd.')->group(function () {
     Route::post('/berita/store', [BeritaInstansiController::class, 'store'])->name('beritainstansi.store');
     Route::put('/berita/update/{id}', [BeritaInstansiController::class, 'update'])->name('beritainstansi.update');
     Route::delete('/berita/delete/{id}', [BeritaInstansiController::class, 'destroy'])->name('beritainstansi.destroy');
+});
 
+// Routes Admin - Pembimbing
+Route::prefix('admin/pembimbing')->name('pembimbing.')->group(function (){
+    // Route Dashboard
+    Route::get('/dashboard', [PembimbingDashboard::class, 'index'])
+        ->name('dashboard');
+    // Route Daftar Peserta
+    Route::get('/daftar-peserta', [DaftarPesertaController::class, 'index'])
+        ->name('daftar-peserta.index');
+    Route::get('/daftar-peserta/detail', [DaftarPesertaController::class, 'detail'])
+        ->name('daftar-peserta.detail');
+    // Route Presensi
+    Route::get('/presensi', [PresensiController::class, 'index'])
+        ->name('presensi.index');
+    Route::get('/presensi/detail', [PresensiController::class, 'detail'])
+        ->name('presensi.detail');
+    // Route Progres
+    Route::get('/progres', [ProgresController::class, 'index'])
+        ->name('progres.index');
+    Route::get('/progres/detail', [ProgresController::class, 'detail'])
+        ->name('progres.detail');
+    // Route Penilaian
+    Route::get('/penilaian', [PenilaianController::class, 'index'])
+        ->name('penilaian.index');
+    Route::get('/penilaian/detail', [PenilaianController::class, 'detail'])
+        ->name('penilaian.detail');
+    Route::get('/penilaian/edit', [PenilaianController::class, 'edit'])
+        ->name('penilaian.edit');
+    Route::put('/penilaian/update/{id}', [PenilaianController::class, 'update'])
+        ->name('penilaian.update');
 });

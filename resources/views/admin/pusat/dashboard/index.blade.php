@@ -7,9 +7,7 @@
 @section('content')
 
     @include('admin.pusat.components._stats-card')
-
     @include('admin.pusat.components._pemohon-chart')
-
     @include('admin.pusat.components._peserta-chart')
 
 @endsection
