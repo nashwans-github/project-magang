@@ -42,18 +42,18 @@ class DashboardController extends Controller
         }
 
        // 4. DATA GRAFIK HORIZONTAL (PESERTA PER DINAS)
-$chartData = [];
-foreach ($dataInstansi as $opd) {
-    $jumPeserta = count(array_filter($dataPeserta, function ($p) use ($opd) {
-        // PERBAIKAN: Cek id_dinas, jika tidak ada cek instansi_slug
-        if (isset($p['id_dinas'])) {
-            return $p['id_dinas'] === $opd['id'];
-        }
-        if (isset($p['instansi_slug'])) {
-            return $p['instansi_slug'] === $opd['slug'];
-        }
-        return false;
-    }));
+    $chartData = [];
+    foreach ($dataInstansi as $opd) {
+        $jumPeserta = count(array_filter($dataPeserta, function ($p) use ($opd) {
+            // PERBAIKAN: Cek id_dinas, jika tidak ada cek instansi_slug
+            if (isset($p['id_dinas'])) {
+                return $p['id_dinas'] === $opd['id'];
+            }
+            if (isset($p['instansi_slug'])) {
+                return $p['instansi_slug'] === $opd['slug'];
+            }
+            return false;
+        }));
 
     $chartData[] = [
         'name'  => $opd['name'],
