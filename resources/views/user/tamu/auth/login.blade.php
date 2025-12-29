@@ -29,10 +29,11 @@
         <p class="text-[18] font-poppins text-[#FFFFFF]/100 mb-8">Masuk ke akun yang sudah dibuat</p>
 
         {{-- FORM --}}
-        <form action="#" method="POST" class="space-y-4">
+        <form action="{{ route('login.authenticate') }}" method="POST" class="space-y-4">
+            @csrf
             <div>
                 <label class="text-[#FFFFFF] text-[18] font-poppins">Email</label>
-                <input type="text"
+                <input type="email" name="email"
                     class="w-full mt-1 px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[600] focus:outline-none">
             </div>
 
@@ -75,5 +76,22 @@
         </form>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const intended = sessionStorage.getItem('intended_instansi');
+
+    if (intended) {
+        const form = document.querySelector('form');
+        if (form) {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'intended_instansi';
+            input.value = intended;
+            form.appendChild(input);
+        }
+    }
+});
+</script>
 
 @endsection

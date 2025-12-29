@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'dinas-kesehatan' => [
+    'kesehatan' => [
         'name' => 'Dinas Kesehatan',
-        'slug' => 'dinas-kesehatan',
+        'slug' => 'kesehatan',
         'deskripsi' => 'DINKES Surabaya bertugas untuk mengelola 
                         Pusat Kesehatan Masyarakat (Puskesmas) yang ada di seluruh 
                         kecamatan, menjalankan program vaksinasi, meengendalikan 
@@ -37,9 +37,9 @@ return [
         ]
     ],
 
-    'dinas-pendidikan' => [
+    'pendidikan' => [
         'name' => 'Dinas Pendidikan',
-        'slug' => 'dinas-pendidikan',
+        'slug' => 'pendidikan',
         'deskripsi' => 'DISPENDIK Surabaya bertanggung jawab penuh untuk
                         mengelola sekolah negeri, membina tenaga pendidik
                         (Guru), menyusun kurikulum muatan lokal, mendistribusikan
@@ -73,9 +73,9 @@ return [
         ]
     ],
 
-    'kominfo' => [
+    'komunikasi-informatika' => [
         'name' => 'Dinas Komunikasi dan Informatika',
-        'slug' => 'kominfo',
+        'slug' => 'komunikasi-informatika',
         'deskripsi' => 'DINKOMINFO Surabaya bertugas mengelola
                         jaringan internet pemerintah, mengembangkan aplikasi
                         layanan publik, mengelola situs web dan sosial media

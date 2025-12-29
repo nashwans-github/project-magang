@@ -13,8 +13,28 @@ class LoginController extends Controller
     }
 
     public function authenticate(Request $request)
-    {
-        // validasi
-        // attempt login
+{
+    $request->validate([
+        'email'    => ['required'],
+        'password' => ['required'],
+    ]);
+
+    // ==========================
+    // FAKE LOGIN (SEMENTARA)
+    // ==========================
+    session([
+        'portal_logged_in' => true,
+        'portal_user' => [
+            'email' => $request->email,
+        ],
+    ]);
+
+    // Redirect prioritas
+    if ($request->filled('intended_instansi')) {
+        return redirect($request->intended_instansi);
     }
+
+    return redirect('/portal/instansi/komunikasi-informatika');
+}
+
 }

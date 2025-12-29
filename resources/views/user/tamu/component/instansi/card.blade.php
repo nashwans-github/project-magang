@@ -28,15 +28,11 @@
             <!-- Button -->
             <div class="flex justify-end mt-auto pt-4">
                 <a href="{{ route(
-                    'user.pemohon.instansi.homeinstansi',
-                    $instansi['slug']
-                ) }}"
-                    class="flex items-center gap-1
-                          h-[29px] px-3
-                          rounded-full
-                          bg-[#3E3E3E]
-                          border-2 border-white
-                          text-white text-xs font-medium transition">
+                    'user.pemohon.instansi.homeinstansi', $instansi['slug']) }}"
+                    class="instansi-link flex items-center gap-1 h-[29px] px-3 rounded-full
+                        bg-[#3E3E3E] border-2 border-white text-white text-xs font-medium transition"
+                        data-env="{{ app()->environment() }}"
+                        data-auth="{{ auth()->check() ? '1' : '0' }}">
                     Lihat <span class="text-base mb-0.5 leading-none">→</span>
                 </a>
             </div>

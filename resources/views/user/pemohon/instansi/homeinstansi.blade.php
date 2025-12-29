@@ -19,20 +19,19 @@
                 {{ $instansi['deskripsi'] ?? '-' }}
             </p>
 
-            {{-- Tombol Daftar diubah jadi link --}}
             @php
-            $slug = is_array($instansi)
-            ? ($instansi['slug'] ?? Str::slug($instansi['name']))
-            : ($instansi->slug ?? Str::slug($instansi->name));
+            use Illuminate\Support\Str;
+
+            $slug = $instansi['slug'] ?? Str::slug($instansi['name']);
+            $url = route('pendaftaran.pemohon', $slug);
             @endphp
 
-            <a href="#"
-                class="bg-[#0554F2] hover:bg-blue-700 text-white font-semibold py-3 
-                w-[198px] text-lg rounded-lg transition-colors shadow-[0_0_20px_rgba(5,84,242,0.5)]
-                inline-block text-center">
+            <a href="{{ $url }}"
+            class="bg-[#0554F2] hover:bg-blue-700 text-white font-semibold py-3 
+                    w-[198px] text-lg rounded-lg transition-colors shadow-[0_0_20px_rgba(5,84,242,0.5)]
+                    inline-block text-center">
                 Daftar
             </a>
-
         </div>
 
         {{-- GRID --}}

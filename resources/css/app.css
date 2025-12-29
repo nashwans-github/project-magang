@@ -16,7 +16,7 @@
   }
 
   .menu-item.active {
-    background-image: url('/images/kotak.svg');
+    background-image: url('/vector/kotakaktif.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 95%;
@@ -77,6 +77,39 @@
   }
 
   /* ------------------------------------------------- */
+  /* EXIT BUTTON – DEFAULT                             */
+  /* ------------------------------------------------- */
+  .exit-btn {
+    width: 48px;
+    height: 48px;
+    padding: 0 !important;
+    border-radius: 9999px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .exit-btn .exit-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* ------------------------------------------------- */
+  /* EXIT BUTTON – SHRINK (OVERRIDE LOGIN STYLE)       */
+  /* ------------------------------------------------- */
+  .navbar-shrink .exit-btn {
+    width: 36px;
+    height: 36px;
+    padding: 0 !important;          
+    border-radius: 9999px !important;
+  }
+
+  .navbar-shrink .exit-btn .exit-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* ------------------------------------------------- */
   /* GLOBAL SCROLL BEHAVIOR                            */
   /* Prevent section being hidden by fixed navbar     */
   /* ------------------------------------------------- */
@@ -87,6 +120,13 @@
     scroll-margin-top: 90px;
   }
 
+  #hero2,
+  #pemberitahuan,
+  #informasi,
+  #login {
+    scroll-margin-top: 90px;
+  }
+
   /* ------------------------------------------------- */
   /* NAVBAR BACKDROP OVERRIDE                          */
   /* Explicitly disable blur in some conditions        */
@@ -94,6 +134,28 @@
   #navbar {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+  }
+
+  /* ================================================= */
+  /* FIX BROWSER AUTOFILL (Chrome / Edge / Brave)     */
+  /* ================================================= */
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+
+      /* Paksa warna teks */
+      -webkit-text-fill-color: #000000 !important;
+
+      /* Paksa background sesuai desain input */
+      -webkit-box-shadow: 
+          0 0 0 1000px rgba(255, 255, 255, 0.0) inset !important;
+
+      /* Trik anti Chrome repaint */
+      transition: background-color 9999s ease-in-out 0s;
   }
 }
 

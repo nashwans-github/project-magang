@@ -4,7 +4,7 @@
         @php
         $instansis = [
         [
-        'slug' => 'kominfo',
+        'slug' => 'komunikasi-informatika',
         'img' => '/images/kominfo.jpg',
         'title' => "Dinas Komunikasi dan<br>Informatika",
         'desc' => "DINKOMINFO Surabaya bertugas mengelola
@@ -15,7 +15,7 @@
         Center 112."
         ],
         [
-        'slug' => 'dinas-pendidikan',
+        'slug' => 'pendidikan',
         'img' => '/images/dinpen.jpg',
         'title' => "Dinas Pendidikan",
         'desc' => "DISPENDIK Surabaya bertanggung jawab penuh
@@ -26,7 +26,7 @@
         pembelajaran di seluruh kota."
         ],
         [
-        'slug' => 'dinas-kesehatan',
+        'slug' => 'kesehatan',
         'img' => '/images/dinkes.jpg',
         'title' => "Dinas Kesehatan",
         'desc' => "DINKES Surabaya bertugas untuk mengelola

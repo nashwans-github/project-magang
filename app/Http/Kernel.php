@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
 
         'pemohon.or.dev' => \App\Http\Middleware\EnsurePemohonOrDev::class,
+        'portal.acces' => \App\Http\Middleware\EnsurePortalAcces::class,
     ];
 }
