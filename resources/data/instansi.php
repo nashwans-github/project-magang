@@ -2,6 +2,7 @@
 
 return [
     'dinas-kesehatan' => [
+        'id' => 1,
         'name' => 'Dinas Kesehatan',
         'singkatan' => 'DINKES',
         'slug' => 'dinas-kesehatan',
@@ -30,7 +31,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'images/dinkes1.png',
@@ -40,10 +41,12 @@ return [
     ],
 
     'dinas-pendidikan' => [
+        'id' => 2,
         'name' => 'Dinas Pendidikan',
         'slug' => 'dinas-pendidikan',
         'email' => 'dispendik@opd.go.id',
         'singkatan' => 'DISPENDIK',
+
         'deskripsi' => 'DISPENDIK Surabaya bertanggung jawab penuh untuk
                         mengelola sekolah negeri, membina tenaga pendidik
                         (Guru), menyusun kurikulum muatan lokal, mendistribusikan
@@ -68,7 +71,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'images/dinpen1.png',
@@ -78,15 +81,12 @@ return [
     ],
 
     'kominfo' => [
+        'id' => 3,
         'name' => 'Dinas Komunikasi dan Informatika',
         'slug' => 'kominfo',
         'email' => 'dinkominfo@opd.go.id',
         'singkatan' => 'DINKOMINFO',
-        'deskripsi' => 'DINKOMINFO Surabaya bertugas mengelola
-                        jaringan internet pemerintah, mengembangkan aplikasi
-                        layanan publik, mengelola situs web dan sosial media
-                        resmi Pemkot Surabaya, serta mengoperasikan layanan
-                        darurat Command Center 112.',
+        'deskripsi' => 'DINKOMINFO Surabaya bertugas mengelola jaringan internet pemerintah mengembangkan aplikasi layanan publik, mengelola situs web dan sosial media resmi Pemkot Surabaya, serta mengoperasikan layanan darurat Command Center 112.',
         'lokasi' => 'Jl. Jimerto No. 25-27 Lantai 5. Surabaya, Jawa Timur 60272',
         'telepon' => '(031) 5312144',
         'jam' => 'Senin - Jumat, 08.00 - 16.00',
@@ -97,6 +97,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -106,7 +108,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'images/kominfo1.png',
@@ -116,6 +118,7 @@ return [
     ],
 
     'perumahan' => [
+        'id' => 4,
         'name' => 'Dinas Perumahan Rakyat dan Kawasan Pemukiman Serta Pertahanan',
         'slug' => 'perumahan',
         'email' => 'dprkpp@opd.go.id',
@@ -134,6 +137,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -143,7 +148,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'images/dinperumahan1.png',
@@ -153,6 +158,7 @@ return [
     ],
 
     'ketahanan-pangan' => [
+        'id' => 5,
         'name' => 'Dinas Ketahanan Pangan dan Pertanian',
         'slug' => 'ketahanan-pangan',
         'email' => 'dkpp@opd.go.id',
@@ -171,6 +177,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -180,7 +188,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'images/dinpangan1.png',
@@ -190,6 +198,7 @@ return [
     ],
 
     'sumber-daya-air' => [
+        'id' => 6,
         'name' => 'Dinas Sumber Daya Air dan Bina Marga',
         'slug' => 'sumber-daya-air',
         'email' => 'dsdabm@opd.go.id',
@@ -210,6 +219,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -219,7 +230,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'images/dinsumberair1.png',
@@ -229,6 +240,7 @@ return [
     ],
 
     'dinas-lingkungan_hidup' => [
+        'id' => 7,
         'name' => 'Dinas Lingkungan Hidup',
         'slug' => 'dinas-lingkungan_hidup',
         'email' => 'dlh@opd.go.id',
@@ -244,6 +256,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -253,7 +267,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'images/dokumentasi-dinas/dlh1.png',
@@ -264,6 +278,7 @@ return [
 
 
     'dinas-kependudukan' => [
+        'id' => 8,
         'name' => 'Dinas Kependudukan dan Pencatatan Sipil',
         'slug' => 'dinas-kependudukan',
         'email' => 'disdukcapil@opd.go.id',
@@ -279,6 +294,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -288,7 +305,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'img/disdukcapil1.png',
@@ -298,6 +315,7 @@ return [
     ],
 
     'dinas-p3a' => [
+        'id' => 9,
         'name' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
         'slug' => 'dinas-p3a',
         'email' => 'dp3appkb@opd.go.id',
@@ -313,6 +331,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -322,7 +342,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'img/dp3a-1.png',
@@ -332,6 +352,7 @@ return [
     ],
 
     'dinas-perhubungan' => [
+        'id' => 10,
         'name' => 'Dinas Perhubungan',
         'slug' => 'dinas-perhubungan',
         'email' => 'dishub@opd.go.id',
@@ -347,6 +368,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -356,7 +379,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'img/dishub1.png',
@@ -366,6 +389,7 @@ return [
     ],
 
     'dinas-koperasi' => [
+        'id' => 11,
         'name' => 'Dinas Koperasi Usaha Kecil dan Menengah dan Perdagangan',
         'slug' => 'dinas-koperasi',
         'email' => 'diskopdag@opd.go.id',
@@ -381,6 +405,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -390,7 +416,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'img/diskopdag1.png',
@@ -400,6 +426,7 @@ return [
     ],
 
     'dinas-kebudayaan' => [
+        'id' => 12,
         'name' => 'Dinas Kebudayaan, Kepemudaan, dan Olahraga, serta Pariwisata',
         'slug' => 'dinas-kebudayaan',
         'email' => 'dkkorp@opd.go.id',
@@ -415,6 +442,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -424,7 +453,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'img/dkkorp1.png',
@@ -434,6 +463,7 @@ return [
     ],
 
     'dinas-perpustakaan' => [
+        'id' => 13,
         'name' => 'Dinas Perpustakaan dan Kearsipan',
         'slug' => 'dinas-perpustakaan',
         'email' => 'dispusip@opd.go.id',
@@ -449,6 +479,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -458,7 +490,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'img/dispusip1.png',
@@ -468,6 +500,7 @@ return [
     ],
 
     'dinas-pmptsp' => [
+        'id' => 14,
         'name' => 'Dinas Penanaman Modal dan Pelayanan Satu Pintu',
         'slug' => 'dinas-pmptsp',
         'email' => 'dpmptsp@opd.go.id',
@@ -483,6 +516,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -492,7 +527,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'img/dpmptsp1.png',
@@ -502,6 +537,7 @@ return [
     ],
 
     'dinas-perindustrian' => [
+        'id' => 15,
         'name' => 'Dinas Perindustrian dan Tenaga Kerja',
         'slug' => 'dinas-perindustrian',
         'email' => 'disperinaker@opd.go.id',
@@ -517,6 +553,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -526,7 +564,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'img/disperinaker1.png',
@@ -536,6 +574,7 @@ return [
     ],
 
     'dinas-pemadam_kebakaran' => [
+        'id' => 16,
         'name' => 'Dinas Pemadam Kebakaran dan Penyelamatan',
         'slug' => 'dinas-pemadam_kebakaran',
         'email' => 'pmk112@opd.go.id',
@@ -551,6 +590,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -560,7 +601,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'img/dpmk1.png',
@@ -570,6 +611,7 @@ return [
     ],
 
     'dinas-sosial' => [
+        'id' => 17,
         'name' => 'Dinas Sosial',
         'slug' => 'dinas-sosial',
         'email' => 'disos@opd.go.id',
@@ -585,6 +627,8 @@ return [
             'Proposal',
             'CV'
         ],
+        'pembimbing' => 0, 
+        'peserta'    => 0,
         'bidang' => [
                         ['name' => 'Sosial Media', 'icon' => 'BDG-sosial_media.svg', 'gradient_start' => '#FF5F6D', 'gradient_end' => '#FFC371'],
                         ['name' => 'Desain', 'icon' => 'BDG-desain.svg', 'gradient_start' => '#1C8CFF', 'gradient_end' => '#FFFFFF'],
@@ -594,7 +638,7 @@ return [
                         ['name' => 'Website', 'icon' => 'BDG-website.svg', 'gradient_start' => '#663399', 'gradient_end' => '#E8D1FF'],
                         ['name' => 'Aplikasi', 'icon' => 'BDG-aplikasi.svg', 'gradient_start' => '#7D648B', 'gradient_end' => '#F9F9F9'],
                         ['name' => 'Jaringan', 'icon' => 'BDG-jaringan.svg', 'gradient_start' => '#F59E9E', 'gradient_end' => '#F9F9F9'],
-                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#A1C4FD', 'gradient_end' => '#C2E9FB'],
+                        ['name' => 'BLC', 'icon' => 'BDG-BLC.svg', 'gradient_start' => '#C2E9FB', 'gradient_end' => '#A1C4FD'],
                     ],
         'gallery' => [
             'img/dinsos1.png',

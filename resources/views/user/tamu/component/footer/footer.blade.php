@@ -54,10 +54,10 @@
                     <div class="mr-16 lg:mr-24">
                         <h3 class="font-black text-2xl mb-8">Link Cepat</h3>
                         <ul class="space-y-4 text-sm font-bold opacity-90">
-                            <li><a href="/?section=hero" class="scroll-link hover:underline hover:text-white/80">Beranda</a></li>
-                            <li><a href="/?section=instansi" class="scroll-link hover:underline hover:text-white/80">Instansi</a></li>
-                            <li><a href="/?section=langkah" class="scroll-link hover:underline hover:text-white/80">Cara Mendaftar</a></li>
-                            <li><a href="/?section=faq" class="scroll-link hover:underline hover:text-white/80">Faq</a></li>
+                            <li><a href="#hero" class="scroll-link hover:underline hover:text-white/80">Beranda</a></li>
+                            <li><a href="#instansi" class="scroll-link hover:underline hover:text-white/80">Instansi</a></li>
+                            <li><a href="#langkah" class="scroll-link hover:underline hover:text-white/80">Cara Mendaftar</a></li>
+                            <li><a href="#faq" class="scroll-link hover:underline hover:text-white/80">Faq</a></li>
                         </ul>
                     </div>
 

@@ -4,90 +4,83 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const links = document.querySelectorAll("a.scroll-link");
 
-    const sectionMap = {
-        hero: "hero",
-        instansi: "instansi",
-        langkah: "langkah",
-        faq: "faq",
-    };
-
-    const isHome =
-        window.location.pathname === "/" ||
-        window.location.pathname === "/index";
-
     /* ========================= */
-    /* NAVBAR SHRINK */
+    /* NAVBAR SHRINK             */
     /* ========================= */
-    const updateNavbar = () => {
-        const shrink = window.scrollY > 20;
-
-        navbar.classList.toggle("navbar-shrink", shrink);
-        navbar.classList.toggle("bg-black/85", shrink);
-        navbar.classList.toggle("bg-white/50", !shrink);
-        navbar.classList.toggle("backdrop-blur-md", !shrink);
-    };
+    function updateNavbar() {
+        if (window.scrollY > 20) {
+            navbar.classList.add("navbar-shrink", "bg-black/85");
+            navbar.classList.remove("bg-white/50", "backdrop-blur-md");
+        } else {
+            navbar.classList.remove("navbar-shrink", "bg-black/85");
+            navbar.classList.add("bg-white/50", "backdrop-blur-md");
+        }
+    }
 
     window.addEventListener("scroll", updateNavbar);
     updateNavbar();
 
     /* ========================= */
-    /* ACTIVE LINK */
+    /* ACTIVE LINK (SCROLL ONLY) */
     /* ========================= */
-    const setActiveLink = (key) => {
-        links.forEach((l) => l.classList.remove("active-nav"));
+    function setActiveLink(targetId) {
+        links.forEach(l => l.classList.remove("active-nav"));
 
-        const active = document.querySelector(
-            `a.scroll-link[href="/?section=${key}"]`
-        );
-        active?.classList.add("active-nav");
-    };
+        links.forEach(l => {
+            const href = l.getAttribute("href");
+            if (href === `#${targetId}`) {
+                l.classList.add("active-nav");
+            }
+        });
+    }
 
     /* ========================= */
-    /* CLICK HANDLER */
+    /* CLICK HANDLER (SMART)     */
     /* ========================= */
-links.forEach((link) => {
-    link.addEventListener("click", (e) => {
-        const url = new URL(link.href);
+    links.forEach(link => {
+        link.addEventListener("click", e => {
+            const href = link.getAttribute("href");
+            if (!href || !href.startsWith("#")) return;
 
-        // ✅ biarkan link eksternal jalan normal
-        if (url.origin !== window.location.origin) return;
+            const targetId = href.replace("#", "");
+            const target = document.getElementById(targetId);
 
-        const section = url.searchParams.get("section");
-        const targetId = sectionMap[section];
+            // ✅ JIKA SECTION ADA → SCROLL
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: "smooth" });
+                return;
+            }
 
-        if (!targetId || !isHome) return;
-
-        const target = document.getElementById(targetId);
-        if (!target) return;
-
-        e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth" });
+            // ❗ JIKA TIDAK ADA → REDIRECT KE HOME + SECTION
+            e.preventDefault();
+            window.location.href = `/?section=${targetId}`;
+        });
     });
-});
 
     /* ========================= */
-    /* SCROLLSPY */
+    /* SCROLLSPY (HOME ONLY)     */
     /* ========================= */
-    if (isHome) {
-        const sections = Object.entries(sectionMap)
-            .map(([key, id]) => ({
-                key,
-                el: document.getElementById(id),
-            }))
-            .filter((s) => s.el);
+    const sections = Array.from(links)
+        .map(link => {
+            const id = link.getAttribute("href")?.replace("#", "");
+            return id ? document.getElementById(id) : null;
+        })
+        .filter(Boolean);
 
+    if (sections.length) {
         const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) return;
-                    const match = sections.find((s) => s.el === entry.target);
-                    if (match) setActiveLink(match.key);
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setActiveLink(entry.target.id);
+                    }
                 });
             },
             { threshold: 0.6 }
         );
 
-        sections.forEach((s) => observer.observe(s.el));
+        sections.forEach(sec => observer.observe(sec));
     }
 
     /* ========================= */
@@ -96,14 +89,12 @@ links.forEach((link) => {
     const params = new URLSearchParams(window.location.search);
     const requested = params.get("section");
 
-    if (isHome && requested && sectionMap[requested]) {
-        const target = document.getElementById(sectionMap[requested]);
-
+    if (requested) {
+        const target = document.getElementById(requested);
         if (target) {
             setTimeout(() => {
                 target.scrollIntoView({ behavior: "smooth" });
-                setActiveLink(requested);
-                history.replaceState(null, "", "/");
+                history.replaceState(null, "", window.location.pathname);
             }, 100);
         }
     }

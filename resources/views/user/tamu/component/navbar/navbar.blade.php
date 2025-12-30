@@ -15,10 +15,10 @@
         <div class="flex items-center">
 
             <ul class="navbar-menu flex items-center">
-                <li><a href="/?section=hero" class="scroll-link nav-scroll text-[#0015FF] text-[18.5px] font-medium hover:text-blue-800 transition" style="font-family: 'Poppins', sans-serif;">Beranda</a></li>
-                <li><a href="/?section=instansi" class="scroll-link nav-scroll text-[#0015FF] text-[18.5px] font-medium hover:text-blue-800 transition" style="font-family: 'Poppins', sans-serif;">Instansi</a></li>
-                <li><a href="/?section=langkah" class="scroll-link nav-scroll text-[#0015FF] text-[18.5px] font-medium hover:text-blue-800 transition" style="font-family: 'Poppins', sans-serif;">Cara Mendaftar</a></li>
-                <li><a href="/?section=faq" class="scroll-link nav-scroll text-[#0015FF] text-[18.5px] font-medium hover:text-blue-800 transition" style="font-family: 'Poppins', sans-serif;">Faq</a></li>
+                <li><a href="#hero" data-navbar="guest" class="scroll-link nav-scroll text-[#0015FF] text-[18.5px] font-medium hover:text-blue-800 transition" style="font-family: 'Poppins', sans-serif;">Beranda</a></li>
+                <li><a href="#instansi" data-navbar="guest" class="scroll-link nav-scroll text-[#0015FF] text-[18.5px] font-medium hover:text-blue-800 transition" style="font-family: 'Poppins', sans-serif;">Instansi</a></li>
+                <li><a href="#langkah" data-navbar="guest" class="scroll-link nav-scroll text-[#0015FF] text-[18.5px] font-medium hover:text-blue-800 transition" style="font-family: 'Poppins', sans-serif;">Cara Mendaftar</a></li>
+                <li><a href="#faq" data-navbar="guest" class="scroll-link nav-scroll text-[#0015FF] text-[18.5px] font-medium hover:text-blue-800 transition" style="font-family: 'Poppins', sans-serif;">Faq</a></li>
             </ul>
 
             <div class="nav-action">
