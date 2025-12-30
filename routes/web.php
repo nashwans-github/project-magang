@@ -34,7 +34,7 @@ use App\Http\Controllers\Admin\Opd\DashboardController as OpdDashboard;
 use App\Http\Controllers\Admin\Opd\ProfileController;
 use App\Http\Controllers\Admin\Opd\PembimbingController;
 use App\Http\Controllers\Admin\Opd\VerifikasiController;
-use App\Http\Controllers\Admin\Opd\PesertaController;
+use App\Http\Controllers\Admin\Opd\PesertaController as AdminPesertaController;
 use App\Http\Controllers\Admin\Opd\SuratMagangController;
 use App\Http\Controllers\Admin\Opd\BeritaInstansiController;
 
@@ -201,8 +201,8 @@ Route::prefix('admin/opd')->name('opd.')->group(function () {
     Route::get('/verifikasi/{id}', [VerifikasiController::class, 'show'])->name('verifikasi.detail');
 
     // Peserta Aktif
-    Route::get('/peserta', [PesertaController::class, 'index'])->name('peserta.index');
-    Route::get('/peserta/{id}', [PesertaController::class, 'show'])->name('peserta.show');
+    Route::get('/peserta', [AdminPesertaController::class, 'index'])->name('peserta.index');
+    Route::get('/peserta/{id}', [AdminPesertaController::class, 'show'])->name('peserta.show');
 
     // Surat Magang
     Route::get('/surat-magang', [SuratMagangController::class, 'index'])->name('suratmagang.index');
