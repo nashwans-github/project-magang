@@ -103,8 +103,8 @@ class DashboardController extends Controller
         // ==========================================
         // 5. KIRIM SEMUA KE VIEW
         // ==========================================
-        return view('admin.pusat.dashboard.index        ', compact(
-            // Data Widget
+        return view('admin.pusat.dashboard.index', compact(
+            // Data Stats
             'totalOpd', 
             'totalPendaftar', 
             'totalPeserta', 

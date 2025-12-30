@@ -21,6 +21,8 @@ use App\Http\Controllers\Admin\Pembimbing\PresensiController;
 use App\Http\Controllers\Admin\Pembimbing\ProgresController;
 use App\Http\Controllers\Admin\Pembimbing\PenilaianController;
 
+use App\Http\Controllers\Admin\Auth\LoginController as AdminLoginController;
+
 // Routes User
 Route::get('/', [TamuController::class, 'index'])->name('homepage');
 
@@ -97,4 +99,14 @@ Route::prefix('admin/pembimbing')->name('pembimbing.')->group(function (){
         ->name('penilaian.edit');
     Route::put('/penilaian/update/{id}', [PenilaianController::class, 'update'])
         ->name('penilaian.update');
+});
+
+// Routes Auth Admin
+Route::prefix('admin')->name('admin.')->group(function (){
+    Route::get('/login', [AdminLoginController::class, 'showLoginForm'])
+        ->name('login');
+    Route::post('/login', [AdminLoginController::class, 'login'])
+        ->name('login.process');
+    Route::post('/logout', [AdminLoginController::class, 'logout'])
+        ->name('logout');
 });
