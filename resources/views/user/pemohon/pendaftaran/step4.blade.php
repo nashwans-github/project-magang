@@ -98,7 +98,7 @@
                                     <label class="text-white text-[18px] tracking-wide block mb-2">Nama</label>
 
                                     <div class="w-full px-4 py-3 rounded-[11px] bg-white/50 
-                                        text-black font-poppins font-semibold">
+                                        text-black font-poppins font-medium">
                                         {{ $pemohon['nama'] ?? '-' }}
                                     </div>
                                 </div>
@@ -120,7 +120,7 @@
 
                                 <div>
                                     <label class="text-white text-[18px] tracking-wide">{{ $label }}</label>
-                                    <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-semibold">
+                                    <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-medium">
                                         {{ $pemohon[$key] ?? '-' }}
                                     </div>
                                 </div>
@@ -131,14 +131,14 @@
 
                                     <div>
                                         <label class="text-white text-[18px] tracking-wide">Tanggal Mulai</label>
-                                        <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-semibold">
+                                        <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-medium">
                                             {{ $pemohon['tanggal_mulai'] ?? '-' }}
                                         </div>
                                     </div>
 
                                     <div>
                                         <label class="text-white text-[18px] tracking-wide">Tanggal Selesai</label>
-                                        <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-semibold">
+                                        <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-medium">
                                             {{ $pemohon['tanggal_selesai'] ?? '-' }}
                                         </div>
                                     </div>
@@ -180,7 +180,7 @@
                                     </label>
 
                                     <div class="w-full px-4 py-3 rounded-[11px] bg-white/50 
-                                        text-black font-poppins font-semibold">
+                                        text-black font-poppins font-medium">
                                         {{ $p_nama }}
                                     </div>
                                 </div>
@@ -198,14 +198,14 @@
 
                                 <div>
                                     <label class="text-white text-[18px] tracking-wide">Nomor Handphone</label>
-                                    <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-semibold">
+                                    <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-medium">
                                         {{ $p_no }}
                                     </div>
                                 </div>
 
                                 <div>
                                     <label class="text-white text-[18px] tracking-wide">Email</label>
-                                    <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-semibold">
+                                    <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-medium">
                                         {{ $p_email }}
                                     </div>
                                 </div>
@@ -216,7 +216,7 @@
                                     <div class="relative mt-2">
                                         {{-- TAMPILAN MASKED (default) --}}
                                         <span id="pw-text-{{ $i }}"
-                                            class="w-full block px-4 py-3 rounded-[11px] bg-white/50 text-black font-semibold select-none">
+                                            class="w-full block px-4 py-3 rounded-[11px] bg-white/50 text-black font-medium select-none">
                                             ********
                                         </span>
 
@@ -234,14 +234,14 @@
 
                                 <div>
                                     <label class="text-white text-[18px] tracking-wide">Jurusan</label>
-                                    <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-semibold">
+                                    <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-medium">
                                         {{ $p_jurusan }}
                                     </div>
                                 </div>
 
                                 <div>
                                     <label class="text-white text-[18px] tracking-wide">Bidang Tujuan</label>
-                                    <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-semibold">
+                                    <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-medium">
                                         {{ $p_bidang }}
                                     </div>
                                 </div>
@@ -274,7 +274,7 @@
                                     </label>
 
                                     <div class="w-full px-4 py-3 rounded-[11px] bg-white/50 
-                                        text-black font-poppins font-semibold">
+                                        text-black font-poppins font-medium">
                                         {{ $firstItem['file'] ?? 'Belum ada berkas' }}
                                     </div>
                                 </div>
@@ -298,7 +298,7 @@
                                     </label>
 
                                     <div class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 
-                                        text-black font-semibold">
+                                        text-black font-medium">
                                         {{ $item['file'] }}
                                     </div>
                                 </div>

@@ -43,7 +43,7 @@
     <div onclick="openAddModal(event)" class="flex flex-col items-center group cursor-pointer w-[100px] relative edit-only hidden">
         <div class="relative w-[56px] h-[56px] flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 rounded-[20px] bg-[#939393] rotate-[11deg] shadow-lg"></div>
-            <img src="{{ asset('vector/Tambah.svg') }}" class="relative z-10 w-5 h-5" alt="Tambah">
+            <img src="{{ asset('vector/plus.svg') }}" class="relative z-10 w-5 h-5" alt="Tambah">
         </div>
         <span class="mt-5 text-white text-base font-medium text-center leading-tight">Tambah</span>
     </div>

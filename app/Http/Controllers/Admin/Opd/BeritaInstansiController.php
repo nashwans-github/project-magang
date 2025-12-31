@@ -15,7 +15,7 @@ class BeritaInstansiController extends Controller
 
     public function index(Request $request)
     {
-        Session::forget('simulated_berita'); // Aktifkan jika ingin reset data
+        // Session::forget('simulated_berita'); // Aktifkan jika ingin reset data
 
         // 1. CEK SESSION (SIMULASI DATABASE GLOBAL)
         if (!Session::has('simulated_berita')) {

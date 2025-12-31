@@ -18,7 +18,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12">
             {{-- Asal Instansi --}}
             <div class="flex items-start gap-3">
-                <img src="{{ asset('vector/Instansi.svg') }}" class="w-7 h-7 object-contain mt-3" alt="Icon">
+                <img src="{{ asset('vector/Instansi-Biru.svg') }}" class="w-7 h-7 object-contain mt-3" alt="Icon">
                 <div>
                     <p class="text-white/60 text-base font-semibold mb-1">Asal Instansi</p>
                     <p class="text-white text-xl font-semibold">{{ $peserta['instansi'] }}</p>
@@ -27,7 +27,7 @@
 
             {{-- Dinas --}}
             <div class="flex items-start gap-3">
-                <img src="{{ asset('vector/Dinas.svg') }}" class="w-7 h-7 object-contain mt-3" alt="Icon">
+                <img src="{{ asset('vector/Dinas-Biru.svg') }}" class="w-7 h-7 object-contain mt-3" alt="Icon">
                 <div>
                     <p class="text-white/60 text-base font-semibold mb-1">Dinas</p>
                     <p class="text-white text-xl font-semibold">{{ $peserta['dinas'] }}</p>
@@ -54,7 +54,7 @@
 
             {{-- No HP --}}
             <div class="flex items-start gap-3">
-                <img src="{{ asset('vector/Telfon.svg') }}" class="w-7 h-7 object-contain mt-3" alt="Icon">
+                <img src="{{ asset('vector/telpbiru.svg') }}" class="w-7 h-7 object-contain mt-3" alt="Icon">
                 <div>
                     <p class="text-white/60 text-base font-semibold mb-1">Nomor Handphone</p>
                     <p class="text-white text-xl font-semibold">{{ $peserta['no_telfon'] }}</p>

@@ -37,7 +37,7 @@
 
                 {{-- TOMBOL TAMBAH --}}
                 <a href="{{ route('opd.pembimbing.create') }}" class="w-full md:w-auto bg-[#0554F2] text-white font-medium py-2 px-4 rounded-[10px] flex justify-center items-center gap-2.5 transition shadow-md hover:scale-105">
-                    <img src="{{ asset('vector/Tambah.svg') }}" alt="Tambah" class="w-3 h-3 object-contain">
+                    <img src="{{ asset('vector/plus.svg') }}" alt="Tambah" class="w-3 h-3 object-contain">
                     Tambah Akun
                 </a>
             </div>

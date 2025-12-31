@@ -78,7 +78,7 @@
                     ];
                     }
 
-                    $fieldClassPeserta = "w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-semibold
+                    $fieldClassPeserta = "w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-medium
                     placeholder:text-black/50 focus:outline-none focus:ring-0 border-none";
                     @endphp
 
@@ -418,7 +418,7 @@
                     <input type="text" name="peserta[${newIndex}][nama]"
                         placeholder="Masukkan nama lengkap"
                         class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50
-                                text-black font-semibold placeholder:text-black/50
+                                text-black font-medium placeholder:text-black/50
                                 focus:outline-none focus:ring-0 border-none
                                 ${window.fieldClassPeserta}">
                 </div>
@@ -429,7 +429,7 @@
                     <input type="text" name="peserta[${newIndex}][nomor]"
                         placeholder="08xxxxxxxxxx"
                         class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50
-                                text-black font-semibold placeholder:text-black/50
+                                text-black font-medium placeholder:text-black/50
                                 focus:outline-none focus:ring-0 border-none
                                 ${window.fieldClassPeserta}">
                 </div>
@@ -440,7 +440,7 @@
                     <input type="email" name="peserta[${newIndex}][email]"
                         placeholder="contoh@email.com"
                         class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50
-                                text-black font-semibold placeholder:text-black/50
+                                text-black font-medium placeholder:text-black/50
                                 focus:outline-none focus:ring-0 border-none
                                 ${window.fieldClassPeserta}">
                 </div>
@@ -454,7 +454,7 @@
                         name="peserta[${newIndex}][password]"
                         placeholder="Masukkan password"
                         class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50
-                            text-black font-semibold placeholder:text-black/50
+                            text-black font-medium placeholder:text-black/50
                             focus:outline-none focus:ring-0 border-none pr-12
                             ${window.fieldClassPeserta}">
 
@@ -478,7 +478,7 @@
                     <input type="text" name="peserta[${newIndex}][jurusan]"
                         placeholder="Masukkan jurusan"
                         class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50
-                                text-black font-semibold placeholder:text-black/50
+                                text-black font-medium placeholder:text-black/50
                                 focus:outline-none focus:ring-0 border-none
                                 ${window.fieldClassPeserta}">
                 </div>
@@ -489,7 +489,7 @@
 
                     <select name="peserta[${newIndex}][bidang_tujuan]"
                         class="w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50
-                            text-black font-semibold bidang-tujuan pr-10
+                            text-black font-medium bidang-tujuan pr-10
                             appearance-none
                             focus:outline-none focus:ring-0 focus:border-transparent border-none
                             ${window.fieldClassPeserta}"

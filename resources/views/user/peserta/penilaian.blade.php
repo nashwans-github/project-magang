@@ -102,17 +102,8 @@
 
 </div>
 
-{{-- ====== TABEL PENILAIAN ====== --}}
-<div class="w-full bg-[#3F3F3F] p-10 mb-16">
-    {{-- TITLE --}}
-    <h2 class="text-[32px] font-bold text-white">Statistik Penilaian</h2>
-    <p class="text-[18px] mb-6" style="color:#0554F2;">Peserta - Nashwan Bima Andika</p>
-
-</div>
-
-{{-- ====== DIAGRAM BATANG PENILAIAN ====== --}}
+{{-- ====== STATISTIK PENILAIAN ====== --}}
 @php
-    // flatten data aspek -> satu list
     $chartItems = [];
     foreach ($data as $kategori => $items) {
         foreach ($items as $item) {
@@ -123,85 +114,119 @@
         }
     }
 
-    $maxScale = 4; // skala penilaian
+    $maxScale    = 4;
+    $stepScale   = 0.5;
+    $chartHeight = 340;
+    $totalSteps  = $maxScale / $stepScale;
 @endphp
 
-<div class="bg-[#262626] p-8 border-[3px] border-[#011640] shadow-lg w-full relative overflow-hidden mt-16">
+<div class="w-full bg-[#3F3F3F] p-10 mb-16 shadow-lg relative overflow-hidden">
 
     {{-- background glow --}}
-    <div class="absolute inset-0 bg-gradient-to-br from-[#262626] via-[#2a2a2a] to-[#202020] opacity-50 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-[#3f3f3f] via-[#3a3a3a] to-[#2f2f2f] opacity-60 pointer-events-none"></div>
 
     <div class="relative z-10">
 
-        <h3 class="text-[#0066FF] text-xl font-bold mb-10">
-            Diagram Penilaian Peserta
-        </h3>
+        {{-- TITLE --}}
+        <h2 class="text-[32px] font-extrabold text-white tracking-wide">
+            Statistik Penilaian
+        </h2>
 
-        <div class="flex h-[320px]">
+        <p class="text-[18px] font-semibold mb-12 text-[#0554F2]">
+            Peserta — Nashwan Bima Andika
+        </p>
 
-            {{-- LABEL Y AXIS --}}
-            <div class="w-8 flex items-center justify-center">
-                <span class="text-white text-sm font-semibold -rotate-90 whitespace-nowrap">
+        {{-- ================= DIAGRAM ================= --}}
+        <div class="flex items-start">
+
+            {{-- LABEL Y --}}
+            <div class="w-16 mt-[170px] flex justify-center">
+                <span class="text-white text-sm font-semibold -rotate-90 tracking-wide whitespace-nowrap">
                     Nilai
                 </span>
             </div>
 
             {{-- ANGKA SKALA --}}
-            <div class="flex flex-col justify-between h-full pr-3 text-gray-400 text-sm font-medium">
-                @for ($i = $maxScale; $i >= 0; $i--)
-                    <span>{{ $i }}</span>
+            <div class="relative pr-8" style="height: {{ $chartHeight }}px">
+                @for ($i = 0; $i <= $totalSteps; $i++)
+                    @php
+                        $value  = $i * $stepScale;
+                        $bottom = ($i / $totalSteps) * $chartHeight;
+                    @endphp
+                    <div
+                        class="absolute right-0 text-gray-400 text-sm font-medium"
+                        style="bottom: {{ $bottom - 8 }}px">
+                        {{ number_format($value, 1) }}
+                    </div>
                 @endfor
             </div>
 
             {{-- AREA CHART --}}
-            <div class="relative flex-1 h-full">
+            <div class="relative flex-1 pl-6">
 
                 {{-- GRID --}}
-                <div class="absolute inset-0 flex flex-col justify-between border-l border-b border-gray-600 pointer-events-none">
-                    @for ($i = $maxScale; $i >= 0; $i--)
-                        <div class="border-t border-gray-700/50 h-0"></div>
+                <div class="relative" style="height: {{ $chartHeight }}px">
+
+                    @for ($i = 0; $i <= $totalSteps; $i++)
+                        @php
+                            $bottom = ($i / $totalSteps) * $chartHeight;
+                        @endphp
+                        <div
+                            class="absolute left-0 right-0 border-t border-gray-600/60"
+                            style="bottom: {{ $bottom }}px">
+                        </div>
                     @endfor
+
+                    {{-- AXIS --}}
+                    <div class="absolute inset-0 border-l border-b border-gray-500"></div>
+
+                    {{-- BAR --}}
+                    <div
+                        class="absolute inset-0 grid gap-5 px-6"
+                        style="grid-template-columns: repeat({{ count($chartItems) }}, minmax(0, 1fr)); align-items:end;">
+
+                        @foreach ($chartItems as $item)
+                            @php
+                                $barHeight = ($item['nilai'] / $maxScale) * $chartHeight;
+                            @endphp
+
+                            <div class="relative flex justify-center group">
+
+                                <div
+                                    class="w-[56px] bg-[#60A5FA] group-hover:bg-[#3B82F6]
+                                           transition-all duration-200 rounded-t-sm"
+                                    style="height: {{ $barHeight }}px">
+                                </div>
+
+                                {{-- TOOLTIP --}}
+                                <div
+                                    class="absolute -top-8 px-2 py-1 text-xs font-semibold text-white
+                                           bg-black/80 rounded opacity-0 group-hover:opacity-100
+                                           transition pointer-events-none">
+                                    {{ $item['nilai'] }}
+                                </div>
+
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
 
-                {{-- BAR --}}
-                <div class="absolute inset-0 flex items-end justify-around gap-6 px-6 pb-2">
+                {{-- LABEL PER ITEM --}}
+                <div
+                    class="mt-3 grid gap-5 px-6"
+                    style="grid-template-columns: repeat({{ count($chartItems) }}, minmax(0, 1fr));">
 
                     @foreach ($chartItems as $item)
-                        @php
-                            $heightPercent = ($item['nilai'] / $maxScale) * 100;
-                        @endphp
-
-                        <div class="group relative flex flex-col items-center w-full max-w-[45px]">
-
-                            {{-- batang --}}
-                            @php
-                                $maxBarHeight = 240; // tinggi area chart (px)
-                                $barHeight = ($item['nilai'] / $maxScale) * $maxBarHeight;
-                            @endphp
-                            <div
-                                class="w-full bg-[#60A5FA] hover:bg-[#3B82F6] transition-all rounded-t-sm"
-                                style="height: {{ $barHeight }}px">
-                            </div>
-
-                            {{-- tooltip --}}
-                            <div class="absolute -top-8 opacity-0 group-hover:opacity-100 transition text-xs bg-black/80 px-2 py-1 rounded text-white">
-                                {{ $item['nilai'] }}
-                            </div>
-
-                            {{-- label --}}
-                            <div class="mt-3 text-center">
-                                <span class="block text-white text-xs leading-tight rotate-[-45deg] origin-top-left whitespace-nowrap">
-                                    {{ $item['label'] }}
-                                </span>
-                            </div>
-
+                        <div class="flex justify-center">
+                            <span class="text-white text-xs text-center leading-tight">
+                                {{ $item['label'] }}
+                            </span>
                         </div>
                     @endforeach
-
                 </div>
 
                 {{-- LABEL X --}}
-                <div class="absolute -bottom-14 w-full text-center text-white font-semibold text-sm tracking-wide">
+                <div class="mt-5 w-full text-center text-white font-semibold text-sm tracking-wide">
                     Aspek Penilaian
                 </div>
 

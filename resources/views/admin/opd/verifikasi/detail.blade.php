@@ -17,21 +17,21 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12">
             <div class="space-y-6">
                 <div class="flex items-start gap-3">
-                    <img src="{{ asset('vector/Email.svg') }}" alt="email icon" class="w-7 h-7 mt-3">
+                    <img src="{{ asset('vector/Email-Biru.svg') }}" alt="email icon" class="w-7 h-7 mt-3">
                     <div>
                         <label class="text-white/60 text-base font-semibold block">Email</label>
                         <div class="text-white font-semibold text-xl">{{ $applicant['email'] }}</div>
                     </div>
                 </div>
                 <div class="flex items-start gap-3">
-                    <img src="{{ asset('vector/Instansi.svg') }}" alt="instansi icon" class="w-7 h-7 mt-3">
+                    <img src="{{ asset('vector/Instansi-Biru.svg') }}" alt="instansi icon" class="w-7 h-7 mt-3">
                     <div>
                         <label class="text-white/60 text-base font-semibold block">Instansi</label>
                         <div class="text-white font-semibold text-xl">{{ $applicant['instansi'] }}</div>
                     </div>
                 </div>
                  <div class="flex items-start gap-3">
-                    <img src="{{ asset('vector/Telfon.svg') }}" alt="phone icon" class="w-7 h-7 mt-3">
+                    <img src="{{ asset('vector/telpbiru.svg') }}" alt="phone icon" class="w-7 h-7 mt-3">
                     <div>
                         <label class="text-white/60 text-base font-semibold block">Nomor Handphone</label>
                         <div class="text-white font-semibold text-xl">{{ $applicant['no_telfon'] }}</div>
@@ -41,7 +41,7 @@
 
             <div class="space-y-6">
                  <div class="flex items-start gap-3">
-                    <img src="{{ asset('vector/Dinas.svg') }}" alt="dinas icon" class="w-7 h-7 mt-3">
+                    <img src="{{ asset('vector/Dinas-Biru.svg') }}" alt="dinas icon" class="w-7 h-7 mt-3">
                     <div>
                         <label class="text-white/60 text-base font-semibold block">Dinas</label>
                         <div class="text-white font-semibold text-xl">{{ $applicant['dinas_tujuan'] ?? 'Dinas Terkait' }}</div>

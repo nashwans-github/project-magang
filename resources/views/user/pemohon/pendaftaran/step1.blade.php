@@ -59,7 +59,7 @@
                         @csrf
 
                         @php
-                        $fieldClass = "w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-semibold placeholder:text-black/50 focus:outline-none focus:ring-0 focus:border-none";
+                        $fieldClass = "w-full mt-2 px-4 py-3 rounded-[11px] bg-white/50 text-black font-medium placeholder:text-black/50 focus:outline-none focus:ring-0 focus:border-none";
                         @endphp
 
                         {{-- Nama --}}
