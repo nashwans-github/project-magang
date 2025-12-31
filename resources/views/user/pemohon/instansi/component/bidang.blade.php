@@ -49,7 +49,7 @@ $bidang = $instansi['bidang'] ?? [];
                                 fill="url(#grad_{{ $loop->index }})" />
                         </svg>
 
-                        <img src="{{ asset('vector/' . $item['icon']) }}" class="relative z-10 w-8 h-8 object-contain">
+                        <img src="{{ asset('images/icons/' . $item['icon']) }}" class="relative z-10 w-8 h-8 object-contain">
                     </div>
 
                     <span class="text-white font-semibold text-center text-sm w-full">

@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'dinas-kesehatan' => [
+    'kesehatan' => [
         'id' => 1,
         'name' => 'Dinas Kesehatan',
         'singkatan' => 'DINKES',
-        'slug' => 'dinas-kesehatan',
+        'slug' => 'kesehatan',
         'email' => 'dinkes@opd.go.id',
         'deskripsi' => 'DINKES Surabaya bertugas untuk mengelola 
                         Pusat Kesehatan Masyarakat (Puskesmas) yang ada di seluruh 
@@ -40,10 +40,10 @@ return [
         ]
     ],
 
-    'dinas-pendidikan' => [
+    'pendidikan' => [
         'id' => 2,
         'name' => 'Dinas Pendidikan',
-        'slug' => 'dinas-pendidikan',
+        'slug' => 'pendidikan',
         'email' => 'dispendik@opd.go.id',
         'singkatan' => 'DISPENDIK',
 
@@ -80,10 +80,10 @@ return [
         ]
     ],
 
-    'kominfo' => [
+    'komunikasi-informatika' => [
         'id' => 3,
         'name' => 'Dinas Komunikasi dan Informatika',
-        'slug' => 'kominfo',
+        'slug' => 'komunikasi-informatika',
         'email' => 'dinkominfo@opd.go.id',
         'singkatan' => 'DINKOMINFO',
         'deskripsi' => 'DINKOMINFO Surabaya bertugas mengelola jaringan internet pemerintah mengembangkan aplikasi layanan publik, mengelola situs web dan sosial media resmi Pemkot Surabaya, serta mengoperasikan layanan darurat Command Center 112.',
@@ -117,10 +117,10 @@ return [
         ]
     ],
 
-    'perumahan' => [
+    'perumahan-permukiman' => [
         'id' => 4,
         'name' => 'Dinas Perumahan Rakyat dan Kawasan Pemukiman Serta Pertahanan',
-        'slug' => 'perumahan',
+        'slug' => 'perumahan-permukiman',
         'email' => 'dprkpp@opd.go.id',
         'singkatan' => 'DPRKPP',
         'deskripsi' => 'DPRKPP Surabaya  memiliki tugas mengurus segala

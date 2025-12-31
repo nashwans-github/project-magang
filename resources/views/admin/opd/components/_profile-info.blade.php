@@ -64,7 +64,7 @@
             ],
             [
                 'label' => 'No. Telepon', 
-                'icon'  => 'Telfon.svg', 
+                'icon'  => 'telpbiru.svg', 
                 'value' => is_array($instansi['telepon']) 
                         ? implode(', ', $instansi['telepon']) 
                         : ($instansi['telepon'] ?? '-')

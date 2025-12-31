@@ -34,13 +34,13 @@
             <div>
                 <label class="text-[#FFFFFF] text-[18] font-poppins">Email</label>
                 <input type="email" name="email"
-                    class="w-full mt-1 px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[600] focus:outline-none">
+                    class="w-full mt-1 px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[500] focus:outline-none">
             </div>
 
             <div class="relative">
                 <label class="text-[#FFFFFF] text-[18] font-poppins">Password</label>
                 <input type="password" id="passwordInputLogin" name="password"
-                    class="w-full mt-1 px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[600] focus:outline-none pr-10">
+                    class="w-full mt-1 px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[500] focus:outline-none pr-10">
 
                 {{-- Ikon Mata (Toggle) --}}
                 <svg data-password-toggle="passwordInputLogin"

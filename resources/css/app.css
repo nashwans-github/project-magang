@@ -15,22 +15,13 @@
     }
 
     .menu-item.active {
-        background-image: url("/images/kotak.svg");
+        background-image: url('/vector/kotakaktif.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100% 95%;
         height: 70px;
         @apply flex justify-end items-center;
     }
-
-  .menu-item.active {
-    background-image: url('/vector/kotakaktif.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 95%;
-    height: 70px;
-    @apply flex justify-end items-center;
-  }
 
     /* ------------------------------------------------- */
     /* PAGE / BODY BACKGROUND                            */
@@ -82,17 +73,6 @@
 
     .navbar-shrink .navbar-menu {
         gap: 1.25rem;
-    }
-
-    /* ------------------------------------------------- */
-    /* GLOBAL SCROLL BEHAVIOR                            */
-    /* Prevent section being hidden by fixed navbar     */
-    /* ------------------------------------------------- */
-    #hero,
-    #instansi,
-    #langkah,
-    #faq {
-        scroll-margin-top: 90px;
     }
 
   /* ------------------------------------------------- */

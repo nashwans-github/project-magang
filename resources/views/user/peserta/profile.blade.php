@@ -38,7 +38,7 @@
 
                 <!-- Instansi -->
                 <div class="flex items-center gap-4">
-                    <img src="/vector/kampus.svg" class="w-6 opacity-80">
+                    <img src="/vector/instansi-putih.svg" class="w-6 opacity-80">
                     <span>Universitas Negeri Surabaya</span>
                 </div>
 
@@ -55,13 +55,13 @@
 
                 <!-- Bidang -->
                 <div class="flex items-center gap-4">
-                    <img src="/vector/bidang.svg" class="w-6 opacity-80">
+                    <img src="/vector/bidang-putih.svg" class="w-6 opacity-80">
                     <span>Website</span>
                 </div>
 
                 <!-- Status -->
                 <div class="flex items-center gap-4">
-                    <img src="/vector/status.svg" class="w-6 opacity-80">
+                    <img src="/vector/status-putih2.svg" class="w-6 opacity-80">
                     <img src="/vector/aktif.svg" class="h-6 object-contain">
                 </div>
 

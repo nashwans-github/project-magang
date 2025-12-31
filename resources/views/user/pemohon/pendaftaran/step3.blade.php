@@ -74,11 +74,11 @@
                         </label>
 
                         <div class="relative mt-2">
-                            <div class="w-full px-4 py-3 rounded-xl bg-white/50 text-black font-semibold
+                            <div class="w-full px-4 py-3 rounded-xl bg-white/50 text-black font-medium
                         flex items-center justify-between cursor-pointer">
 
                                 <span id="lbl-{{ $field }}"
-                                    class="{{ $uploaded ? 'text-black font-semibold' : 'text-black/50' }}">
+                                    class="{{ $uploaded ? 'text-black font-medium' : 'text-black/50' }}">
                                     {{ $uploaded ?? 'Upload File' }}
                                 </span>
                             </div>
@@ -127,8 +127,11 @@
         if (input.files.length > 0) {
             label.textContent = input.files[0].name;
             label.classList.remove("text-black/50");
-            label.classList.add("text-black");
-            label.style.fontWeight = "600";
+            label.classList.add("text-black", "font-medium"); // tambah font-medium
+        } else {
+            label.textContent = 'Upload File';
+            label.classList.remove("text-black", "font-medium");
+            label.classList.add("text-black/50");
         }
     }
 </script>

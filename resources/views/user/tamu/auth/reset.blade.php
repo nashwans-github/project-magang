@@ -34,7 +34,7 @@
             <div class="relative">
                 <label class="text-[#FFFFFF]/100 text-[18] font-poppins">Password Baru</label>
                 <input type="password" id="newPassword" name="password"
-                    class="w-full mt-1 px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[600] focus:outline-none pr-10">
+                    class="w-full mt-1 px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[500] focus:outline-none pr-10">
 
                 {{-- Ikon Mata (Toggle) Password Baru --}}
                 <svg data-password-toggle="newPassword" data-target="newPassword"
@@ -50,7 +50,7 @@
             <div class="relative">
                 <label class="text-[#FFFFFF]/100 text-[18] font-poppins">Konfirmasi Password Baru</label>
                 <input type="password" id="confirmPassword" name="password_confirmation"
-                    class="w-full mt-1 px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[600] focus:outline-none pr-10">
+                    class="w-full mt-1 px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[500] focus:outline-none pr-10">
 
                 {{-- Ikon Mata (Toggle) Konfirmasi Password --}}
                 <svg data-password-toggle="confirmPassword" data-target="confirmPassword"

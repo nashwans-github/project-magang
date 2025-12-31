@@ -33,7 +33,7 @@
             <div>
                 <label class="text-[#FFFFFF]/100 text-[18] font-poppins">Email</label>
                 <input type="text"
-                    class="w-full mt-1 px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[600] focus:outline-none">
+                    class="w-full mt-1 px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[500] focus:outline-none">
             </div>
 
             {{-- Kode OTP (Layout Dibongkar untuk Proporsi yang Benar) --}}
@@ -43,7 +43,7 @@
                 <div class="flex items-center gap-3 mt-1">
                     <input type="text"
                         {{-- **TAMBAH:** flex-grow agar input mengisi sisa ruang --}}
-                        class="w-full flex-grow px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[600] focus:outline-none">
+                        class="w-full flex-grow px-4 py-3 rounded-[11px] bg-white/50 font-poppins font-[500] focus:outline-none">
 
                     <button type="button"
                         {{-- **TAMBAH:** flex-shrink-0 agar tombol mempertahankan lebar yang ditentukan (px-9) --}}
